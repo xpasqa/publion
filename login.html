@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Publion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            onest: ['"Onest"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  
+  
+  
+  
+</head>
+<body class="font-onest text-gray-900 bg-white">
+
+  <div class="min-h-screen flex">
+    <!-- Left Image -->
+    <div class="hidden md:block md:w-1/2 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80');">
+         <a href="/" class="absolute top-6 left-6 bg-white/70 text-black font-semibold text-lg px-4 py-2 rounded-md shadow hover:bg-white">
+    Publion Research
+  </a>
+    </div>
+
+    <!-- Right Form -->
+    <div class="w-full md:w-1/2 flex items-center justify-center p-8">
+      <div class="max-w-md w-full space-y-6">
+        <h2 class="text-3xl font-bold text-center">Welcome Back</h2>
+        <p class="text-center text-gray-600 text-sm">Sign in to your Publion account</p>
+
+        <form action="#" method="POST" class="space-y-4">
+          <div>
+            <label for="email" class="block text-sm font-medium">Email address</label>
+            <input type="email" id="email" name="email" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" />
+          </div>
+
+          <div>
+            <label for="password" class="block text-sm font-medium">Password</label>
+            <input type="password" id="password" name="password" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500" />
+          </div>
+
+          <button type="submit" class="w-full bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700 transition">Sign In</button>
+
+          <p class="text-center text-sm text-gray-500">Don't have an account?
+            <a href="/register.html" class="text-teal-600 hover:underline">Register here</a>
+          </p>
+        </form>
+
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-gray-300"></div>
+          </div>
+          <div class="relative flex justify-center text-sm">
+            <span class="bg-white px-2 text-gray-500">Or continue with</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <button class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="h-5 w-5" />
+          </button>
+          <button class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50">
+            <img src="https://www.svgrepo.com/show/183607/facebook.svg" alt="Facebook" class="h-5 w-5" />
+          </button>
+          <button class="flex items-center justify-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50">
+            <img src="https://www.svgrepo.com/show/475633/apple-color.svg" alt="Apple" class="h-5 w-5" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

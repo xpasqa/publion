@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find a Journal | Publion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              onest: ['"Onest"', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  
+      <!-- Header -->
+    <header class="bg-white shadow-sm">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href="/index.html" class="text-black-600 font-semibold text-xl">Publion Research</a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 text-sm">
+        <a href="#" class="text-gray-600 hover:text-teal-600 transition">About</a>
+        <a href="#" class="text-gray-600 hover:text-teal-600 transition">Journals</a>
+        <a href="#" class="text-gray-600 hover:text-teal-600 transition">Topics</a>
+        <a href="#" class="text-gray-600 hover:text-teal-600 transition">Guidelines</a>
+        <a href="#" class="text-gray-600 hover:text-teal-600 transition">Blog</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Actions -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="/login.html" class="px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
+        <a href="/register.html" class="hidden sm:inline-block px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-2 text-sm">
+  <a href="#" class="block text-gray-700 hover:text-teal-600">About</a>
+  <a href="#" class="block text-gray-700 hover:text-teal-600">Journals</a>
+  <a href="#" class="block text-gray-700 hover:text-teal-600">Topics</a>
+  <a href="#" class="block text-gray-700 hover:text-teal-600">Guidelines</a>
+  <a href="#" class="block text-gray-700 hover:text-teal-600">Blog</a>
+<div class="flex justify-between gap-2 mt-4 mb-6 pb-6">
+  <a href="/login.html" class="w-1/2 text-center px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
+  <a href="/register.html" class="w-1/2 text-center px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
+</div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  });
+</script>
+  </head>
+
+  <body class="bg-white font-onest text-gray-900">
+
+    <!-- Page Header -->
+    <section class="bg-gray-50 py-16 px-4 text-center">
+      <div class="max-w-2xl mx-auto">
+        <h1 class="text-4xl font-bold mb-4">Find a Journal</h1>
+        <p class="text-gray-700 text-lg font-light">
+          We have a home for your research. Our journals cover more than 1,700 academic disciplines.
+        </p>
+      </div>
+    </section>
+
+    <!-- Journal Cards Grid Section -->
+
+<!-- Search Bar -->
+<div class="max-w-6xl mx-auto px-6 pt-12 pb-4">
+  <div class="relative">
+    <input type="text" placeholder="Search journals..." class="w-full border border-gray-300 rounded-full py-3 px-6 pl-10 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent" />
+    <svg class="w-5 h-5 absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 104.5 4.5a7.5 7.5 0 0012.15 12.15z"></path>
+    </svg>
+  </div>
+</div>
+    <section class="max-w-6xl mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-96">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="Journal Cover" class="h-48 w-full object-cover">
+          <div class="p-4 flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Journal of Social Research</h3>
+            <p class="text-sm text-gray-600">Focuses on contemporary social science topics and their practical impacts on society.</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-96">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Journal Cover" class="h-48 w-full object-cover">
+          <div class="p-4 flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Environmental Policy & Governance</h3>
+            <p class="text-sm text-gray-600">Explores critical environmental and sustainability issues with evidence-based research.</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col h-96">
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80" alt="Journal Cover" class="h-48 w-full object-cover">
+          <div class="p-4 flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Digital Innovation & Society</h3>
+            <p class="text-sm text-gray-600">Publishes studies on how digital technologies transform society, economy, and politics.</p>
+          </div>
+        </div>
+
+        <!-- More cards... -->
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex justify-center items-center mt-12 gap-4">
+        <button class="flex items-center gap-1 text-sm text-gray-700 hover:text-black">
+          <span class="material-symbols-outlined">chevron_left</span> Prev
+        </button>
+        <div class="flex gap-2 text-sm">
+          <button class="px-3 py-1 rounded bg-gray-200 text-gray-800">1</button>
+          <button class="px-3 py-1 rounded hover:bg-gray-200">2</button>
+          <button class="px-3 py-1 rounded hover:bg-gray-200">3</button>
+          <button class="px-3 py-1 rounded hover:bg-gray-200">4</button>
+        </div>
+        <button class="flex items-center gap-1 text-sm text-gray-700 hover:text-black">
+          Next <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Icons CDN for chevrons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-screen-xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Publion Research</h3>
+          <p class="text-gray-400">Empowering knowledge through accessible and impactful research publications.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Journals</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <p class="text-gray-400">Email: info@publion.id</p>
+          <p class="text-gray-400">Phone: +62 812-3456-7890</p>
+          <div class="flex space-x-4 mt-4">
+            <!-- Social icons placeholder -->
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-800 text-center py-4">
+        <p class="text-sm text-gray-400">&copy; 2025 PT Publion Research Ventures. All rights reserved.</p>
+      </div>
+    </footer>
+
+    
+  </body>
+</html>

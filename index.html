@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publion Research</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Onest -->
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Custom Font Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              onest: ['"Onest"', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    
+    
+     <!-- Header -->
+    <header class="bg-white shadow-sm">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="text-black-600 font-semibold text-xl">Publion Research</a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 text-sm">
+        <a href="#" class="text-gray-600 hover:text-teal-600 transition">About</a>
+        <a href="#" class="text-gray-600 hover:text-teal-600 transition">Journals</a>
+        <a href="#" class="text-gray-600 hover:text-teal-600 transition">Topics</a>
+        <a href="#" class="text-gray-600 hover:text-teal-600 transition">Guidelines</a>
+        <a href="#" class="text-gray-600 hover:text-teal-600 transition">Blog</a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Actions -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="/login.html" class="px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
+        <a href="/register.html" class="hidden sm:inline-block px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-2 text-sm">
+  <a href="#" class="block text-gray-700 hover:text-teal-600">About</a>
+  <a href="#" class="block text-gray-700 hover:text-teal-600">Journals</a>
+  <a href="#" class="block text-gray-700 hover:text-teal-600">Topics</a>
+  <a href="#" class="block text-gray-700 hover:text-teal-600">Guidelines</a>
+  <a href="#" class="block text-gray-700 hover:text-teal-600">Blog</a>
+<div class="flex justify-between gap-2 mt-4 mb-6 pb-6">
+  <a href="/login.html" class="w-1/2 text-center px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
+  <a href="/register.html" class="w-1/2 text-center px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
+</div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  });
+</script>
+  </head>
+
+
+    <!-- Hero Banner -->
+    <section class="relative h-[450px] bg-cover bg-center flex items-center justify-center text-white text-center" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1950&q=80');">
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative z-10 px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Where Research<br />Meets Impact</h1>
+        <p class="text-lg mb-6">Jelajahi penelitian terkini dan temukan wawasan baru di Publion Research.</p>
+        <div class="flex justify-center gap-4">
+          <a href="/home.html" class="px-5 py-2 border border-white rounded-full hover:bg-white hover:text-black transition">Baca</a>
+          <a href="/home.html" class="px-5 py-2 border border-white rounded-full hover:bg-white hover:text-black transition">Lihat</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+<section class="pt-12 pb-4 px-4 text-center">
+      <div class="max-w-2xl mx-auto">
+       <h2 class="text-3xl font-bold text-center text-gray-900 mb-2">Publion Research</h2>
+  <p class="text-center text-gray-700 text-base font-light mb-10 max-w-2xl mx-auto">
+      Publion is a research ecosystem that connects brilliant minds to publish, explore, and share academic insights. We curate high-quality, peer-reviewed journals across disciplines to accelerate impactful discoveries.</p>
+      </div>
+    </section>
+    
+    
+<section class="bg-white pt-2 pb-16 px-6 md:px-16 max-w-5xl mx-auto font-onest">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+    <!-- Card 1 -->
+    <a href="#" class="block bg-gray-50 rounded-lg shadow-sm p-6 hover:bg-gray-100 transition">
+      <h4 class="text-md font-semibold text-gray-800 mb-2">Find a journal</h4>
+      <p class="text-sm text-gray-600">
+        We have a home for your research. Our journals cover more than 1,700 academic disciplines.
+      </p>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="#" class="block bg-gray-50 rounded-lg shadow-sm p-6 hover:bg-gray-100 transition">
+      <h4 class="text-md font-semibold text-gray-800 mb-2">Find a topic</h4>
+      <p class="text-sm text-gray-600">
+        Research Topics unite top minds around emerging themes. Join or create your own.
+      </p>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="#" class="block bg-gray-50 rounded-lg shadow-sm p-6 hover:bg-gray-100 transition">
+      <h4 class="text-md font-semibold text-gray-800 mb-2">Submit your research</h4>
+      <p class="text-sm text-gray-600">
+        Ready to publish? Submit now and make greater impact with us.
+      </p>
+    </a>
+
+  </div>
+</section>
+
+<!-- Journal Cards Section -->
+<section class="bg-gray-100 py-12 text-white">
+  <h2 class="text-3xl font-bold text-center text-gray-900 mb-2">Journal Edition</h2>
+  <p class="text-center text-gray-700 text-base font-light mb-10 max-w-2xl mx-auto">
+    Discover our curated collection of high-impact journals across disciplines. Each journal is peer-reviewed, accessible, and dedicated to advancing meaningful research.
+  </p>
+  <div class="max-w-5xl mx-auto px-6 md:px-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Blog Card 1 -->
+      <article class="text-left">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80" alt="Journal Cover" class="w-full h-80 object-cover rounded-md" />
+        <div class="bg-transparent py-4">
+          <a href="#">
+            <h3 class="text-lg font-semibold text-gray-900">Journal of Social Research</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Focuses on contemporary social science topics and their practical impacts on society.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Blog Card 2 -->
+      <article class="text-left">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Journal Cover" class="w-full h-80 object-cover rounded-md" />
+        <div class="bg-transparent py-4">
+          <a href="#">
+            <h3 class="text-lg font-semibold text-gray-900">Environmental Policy & Governance</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Explores critical environmental and sustainability issues with evidence-based research.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Blog Card 3 -->
+      <article class="text-left">
+        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80" alt="Journal Cover" class="w-full h-80 object-cover rounded-md" />
+        <div class="bg-transparent py-4">
+          <a href="#">
+            <h3 class="text-lg font-semibold text-gray-900">Digital Innovation & Society</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Publishes studies on how digital technologies transform society, economy, and politics.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+
+<!-- Blog Card 4 -->
+<article class="text-left">
+  <img src="https://images.unsplash.com/photo-1638202993928-7267aad84c31?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" alt="Journal Cover" class="w-full h-80 object-cover rounded-md" />
+  <div class="bg-transparent py-4">
+    <a href="#">
+      <h3 class="text-lg font-semibold text-gray-900">Health & Medical Insights</h3>
+    </a>
+    <p class="mt-2 text-sm text-gray-700">
+      Delivers in-depth research on healthcare innovations, medical science, and wellness policies.
+    </p>
+    <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+      View Journal &rarr;
+    </a>
+  </div>
+</article>
+
+<!-- Blog Card 5 -->
+<article class="text-left">
+  <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=3032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" alt="Journal Cover" class="w-full h-80 object-cover rounded-md" />
+  <div class="bg-transparent py-4">
+    <a href="#">
+      <h3 class="text-lg font-semibold text-gray-900">Education & Learning</h3>
+    </a>
+    <p class="mt-2 text-sm text-gray-700">
+      Focuses on new methodologies, classroom technology, and equity in global education systems.
+    </p>
+    <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+      View Journal &rarr;
+    </a>
+  </div>
+</article>
+
+<!-- Blog Card 6 -->
+<article class="text-left">
+  <img src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80" alt="Journal Cover" class="w-full h-80 object-cover rounded-md" />
+  <div class="bg-transparent py-4">
+    <a href="#">
+      <h3 class="text-lg font-semibold text-gray-900">AI & Data Ethics</h3>
+    </a>
+    <p class="mt-2 text-sm text-gray-700">
+      Publishes research on AI development, data policy, and digital ethics in society and science.
+    </p>
+    <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+      View Journal &rarr;
+    </a>
+  </div>
+</article>
+
+
+
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Call to Action Section -->
+<section class="bg-white py-12 text-center">
+  <div class="max-w-xl mx-auto px-6">
+    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Ready to publish with Publion?</h3>
+    <p class="text-gray-600 mb-6">Join thousands of researchers who trust Publion for sharing their most impactful work with the world.</p>
+    <a href="#" class="inline-block bg-blue-600 text-white text-sm font-medium px-6 py-3 rounded-full shadow hover:bg-blue-700 transition">
+      Submit Your Manuscript
+    </a>
+  </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-screen-xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Publion Research</h3>
+          <p class="text-gray-400">Empowering knowledge through accessible and impactful research publications.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Journals</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <p class="text-gray-400">Email: info@publion.id</p>
+          <p class="text-gray-400">Phone: +62 812-3456-7890</p>
+          <div class="flex space-x-4 mt-4">
+            <!-- Social icons placeholder -->
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-800 text-center py-4">
+        <p class="text-sm text-gray-400">&copy; 2025 PT Publion Research Ventures. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
