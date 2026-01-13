@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Buku | Publion Research</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Onest -->
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Custom Font Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              onest: ['"Onest"', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-onest bg-white text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="/index.html" class="text-black-600 font-semibold text-xl">Publion Research</a>
+          <nav class="hidden md:flex space-x-6 text-sm">
+            <a href="/about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+            <a href="/katalog-buku.html" class="text-gray-600 hover:text-blue-600 transition">Books</a>
+            <a href="/journals.html" class="text-gray-600 hover:text-blue-600 transition">Journals</a>
+            <a href="#" class="text-gray-600 hover:text-blue-600 transition">Research</a>
+            <a href="#" class="text-gray-600 hover:text-blue-600 transition">Connect</a>
+            <a href="#" class="text-gray-600 hover:text-blue-600 transition">Conference</a>
+          </nav>
+          <div class="hidden md:flex items-center gap-4">
+            <a href="/login.html" class="px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
+            <a href="/register.html" class="hidden stealm:inline-block px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <nav class="text-sm text-gray-500">
+        <a href="/index.html" class="hover:text-gray-700">Beranda</a>
+        <span class="mx-2">/</span>
+        <a href="#" class="hover:text-gray-700">Katalog Buku</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-700">Detail Buku</span>
+      </nav>
+    </section>
+
+    <!-- Book Detail -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-1">
+          <div class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+            <img src="images/globalis.png" alt="Cover buku" class="w-full h-96 object-cover" />
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a href="#" class="flex-1 text-center px-4 py-2 text-sm font-medium text-white bg-black rounded-md hover:bg-blue-700 transition">Beli Buku</a>
+            <a href="#" class="flex-1 text-center px-4 py-2 text-sm font-medium text-black border border-black rounded-md hover:bg-black hover:text-white transition">Unduh Preview</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h1 class="text-3xl font-bold text-gray-900">Metode Riset Modern</h1>
+          <p class="mt-2 text-sm text-gray-500">Oleh Dr. Anisa Putri</p>
+
+          <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-gray-50 rounded-lg p-4">
+              <p class="text-xs uppercase tracking-wide text-gray-500">Harga</p>
+              <p class="mt-1 text-lg font-semibold text-gray-900">Rp 120.000</p>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-4">
+              <p class="text-xs uppercase tracking-wide text-gray-500">ISBN</p>
+              <p class="mt-1 text-lg font-semibold text-gray-900">978-623-0000-001-9</p>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <h2 class="text-xl font-semibold text-gray-900">Sinopsis</h2>
+            <p class="mt-2 text-gray-700 leading-relaxed">
+              Buku ini membahas kerangka riset modern mulai dari perumusan masalah, pemilihan metode, hingga
+              penyusunan naskah ilmiah yang siap publikasi. Dilengkapi contoh praktis dan panduan langkah demi
+              langkah agar proses penelitian menjadi lebih terstruktur dan efektif.
+            </p>
+          </div>
+
+          <div class="mt-6">
+            <h2 class="text-xl font-semibold text-gray-900">Detail Buku</h2>
+            <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
+              <div class="flex justify-between bg-gray-50 rounded-md px-4 py-3">
+                <span>Jumlah Halaman</span>
+                <span class="font-medium">240</span>
+              </div>
+              <div class="flex justify-between bg-gray-50 rounded-md px-4 py-3">
+                <span>Tahun Terbit</span>
+                <span class="font-medium">2024</span>
+              </div>
+              <div class="flex justify-between bg-gray-50 rounded-md px-4 py-3">
+                <span>Bahasa</span>
+                <span class="font-medium">Indonesia</span>
+              </div>
+              <div class="flex justify-between bg-gray-50 rounded-md px-4 py-3">
+                <span>Format</span>
+                <span class="font-medium">Cetak & Digital</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h2 class="text-xl font-semibold text-gray-900">Kata Kunci</h2>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">Metodologi</span>
+              <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">Riset</span>
+              <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">Publikasi</span>
+              <span class="text-xs px-3 py-1 bg-gray-100 rounded-full">Akademik</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Books -->
+    <section class="bg-gray-50 py-12">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl font-semibold text-gray-900 mb-6">Buku Lainnya</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="images/govcore.png" alt="Cover buku" class="w-full h-40 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-900">Strategi Publikasi Ilmiah</h3>
+              <p class="mt-1 text-sm text-gray-500">Nadia Rahman</p>
+              <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">Lihat Detail</a>
+            </div>
+          </article>
+          <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="images/relion.png" alt="Cover buku" class="w-full h-40 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-900">Masa Depan Regional</h3>
+              <p class="mt-1 text-sm text-gray-500">Laras Wijaya</p>
+              <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">Lihat Detail</a>
+            </div>
+          </article>
+          <article class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img src="images/globalis.png" alt="Cover buku" class="w-full h-40 object-cover" />
+            <div class="p-4">
+              <h3 class="text-lg font-semibold text-gray-900">Etika Akademik</h3>
+              <p class="mt-1 text-sm text-gray-500">Hendra Pratama</p>
+              <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">Lihat Detail</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-screen-xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Publion Research</h3>
+          <p class="text-gray-400">Empowering knowledge through accessible and impactful research publications.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Journals</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <p class="text-gray-400">Email: editor@publion.id</p>
+          <p class="text-gray-400">Phone: +62 812-3456-7890</p>
+        </div>
+      </div>
+      <div class="bg-gray-800 text-center py-4">
+        <p class="text-sm text-gray-400">&copy; 2025 PT Publion Research Ventures. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

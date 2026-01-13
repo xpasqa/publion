@@ -34,11 +34,12 @@
 
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex space-x-6 text-sm">
-        <a href="#" class="text-gray-600 hover:text-blue-600 transition">About</a>
-        <a href="#" class="text-gray-600 hover:text-blue-600 transition">Journals</a>
-        <a href="#" class="text-gray-600 hover:text-blue-600 transition">Topics</a>
-        <a href="#" class="text-gray-600 hover:text-blue-600 transition">Guidelines</a>
-        <a href="#" class="text-gray-600 hover:text-bluegit-600 transition">Blog</a>
+        <a href="/about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
+        <a href="/katalog-buku.html" class="text-gray-600 hover:text-blue-600 transition">Books</a>
+        <a href="/journals.html" class="text-gray-600 hover:text-blue-600 transition">Journals</a>
+        <a href="#" class="text-gray-600 hover:text-blue-600 transition">Research</a>
+        <a href="#" class="text-gray-600 hover:text-blue-600 transition">Connect</a>
+        <a href="#" class="text-gray-600 hover:text-blue-600 transition">Conference</a>
       </nav>
 
       <!-- Mobile Toggle -->
@@ -59,11 +60,12 @@
 
     <!-- Mobile Dropdown -->
     <div id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-2 text-sm">
-  <a href="#" class="block text-gray-700 hover:text-teal-600">About</a>
-  <a href="#" class="block text-gray-700 hover:text-teal-600">Journals</a>
-  <a href="#" class="block text-gray-700 hover:text-teal-600">Topics</a>
-  <a href="#" class="block text-gray-700 hover:text-teal-600">Guidelines</a>
-  <a href="#" class="block text-gray-700 hover:text-teal-600">Blog</a>
+  <a href="/about.html" class="block text-gray-700 hover:text-teal-600">About</a>
+  <a href="/katalog-buku.html" class="block text-gray-700 hover:text-teal-600">Books</a>
+  <a href="/journals.html" class="block text-gray-700 hover:text-teal-600">Journals</a>
+  <a href="#" class="block text-gray-700 hover:text-teal-600">Research</a>
+  <a href="#" class="block text-gray-700 hover:text-teal-600">Connect</a>
+  <a href="#" class="block text-gray-700 hover:text-teal-600">Conference</a>
 <div class="flex justify-between gap-2 mt-4 mb-6 pb-6">
   <a href="/login.html" class="w-1/2 text-center px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
   <a href="/register.html" class="w-1/2 text-center px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
@@ -75,10 +77,42 @@
   document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const bookScroll = document.getElementById('book-scroll');
 
     menuToggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+
+    if (bookScroll) {
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+
+      bookScroll.addEventListener('mousedown', (event) => {
+        isDown = true;
+        bookScroll.classList.add('cursor-grabbing');
+        startX = event.pageX - bookScroll.offsetLeft;
+        scrollLeft = bookScroll.scrollLeft;
+      });
+
+      bookScroll.addEventListener('mouseleave', () => {
+        isDown = false;
+        bookScroll.classList.remove('cursor-grabbing');
+      });
+
+      bookScroll.addEventListener('mouseup', () => {
+        isDown = false;
+        bookScroll.classList.remove('cursor-grabbing');
+      });
+
+      bookScroll.addEventListener('mousemove', (event) => {
+        if (!isDown) return;
+        event.preventDefault();
+        const x = event.pageX - bookScroll.offsetLeft;
+        const walk = x - startX;
+        bookScroll.scrollLeft = scrollLeft - walk;
+      });
+    }
   });
 </script>
   </head>
@@ -144,7 +178,7 @@
     Discover our curated collection of high-impact journals across disciplines. Each journal is peer-reviewed, accessible, and dedicated to advancing meaningful research.
   </p>
   <div class="max-w-5xl mx-auto px-6 md:px-16">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory">
 
       <!-- Blog Card 1 -->
       <article class="text-left">
@@ -196,6 +230,178 @@
           </p>
           <a href="https://publion.org/journals/relion/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
             View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Publisher Books Section -->
+<section class="bg-white py-12">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 text-center">
+    <div class="flex flex-col gap-2 items-center">
+      <div>
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-2">Katalog Buku Publisher</h2>
+        <p class="text-center text-gray-700 text-base font-light max-w-2xl mx-auto">
+    Koleksi buku pilihan dari penerbit kami. Silakan ganti judul, cover, dan link sesuai katalog asli.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 md:px-6 mt-10">
+    <div id="book-scroll" class="flex flex-nowrap gap-6 overflow-x-auto pb-4 snap-x snap-mandatory cursor-grab">
+
+      <!-- Book Card 1 -->
+      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
+        <a href="#" class="block overflow-hidden">
+          <img src="images/globalis.png" alt="Cover buku 1" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-900">Metode Riset Modern</h3>
+          <p class="mt-1 text-sm text-gray-500">Dr. Anisa Putri</p>
+          <p class="mt-2 text-sm text-gray-700">
+            Panduan ringkas tentang desain riset, pengumpulan data, dan penulisan ilmiah.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            Lihat Buku &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Book Card 2 -->
+      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
+        <a href="#" class="block overflow-hidden">
+          <img src="images/govcore.png" alt="Cover buku 2" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-900">Kebijakan Publik & Dampak Sosial</h3>
+          <p class="mt-1 text-sm text-gray-500">Prof. Raka Santoso</p>
+          <p class="mt-2 text-sm text-gray-700">
+            Studi kasus kebijakan dan pengaruhnya terhadap komunitas lokal.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            Lihat Buku &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Book Card 3 -->
+      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
+        <a href="#" class="block overflow-hidden">
+          <img src="images/relion.png" alt="Cover buku 3" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-900">Masa Depan Regional</h3>
+          <p class="mt-1 text-sm text-gray-500">Laras Wijaya</p>
+          <p class="mt-2 text-sm text-gray-700">
+            Membahas identitas lokal, budaya, dan dinamika perubahan wilayah.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            Lihat Buku &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Book Card 4 -->
+      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
+        <a href="#" class="block overflow-hidden">
+          <img src="images/globalis.png" alt="Cover buku 4" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-900">Etika Akademik</h3>
+          <p class="mt-1 text-sm text-gray-500">Hendra Pratama</p>
+          <p class="mt-2 text-sm text-gray-700">
+            Prinsip integritas, sitasi, dan etika riset untuk peneliti muda.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            Lihat Buku &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Book Card 5 -->
+      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
+        <a href="#" class="block overflow-hidden">
+          <img src="images/govcore.png" alt="Cover buku 5" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-900">Strategi Publikasi Ilmiah</h3>
+          <p class="mt-1 text-sm text-gray-500">Nadia Rahman</p>
+          <p class="mt-2 text-sm text-gray-700">
+            Tips memilih jurnal, menyusun naskah, dan merespons reviewer.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            Lihat Buku &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Book Card 6 -->
+      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
+        <a href="#" class="block overflow-hidden">
+          <img src="images/relion.png" alt="Cover buku 6" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-900">Ekonomi & Pembangunan Lokal</h3>
+          <p class="mt-1 text-sm text-gray-500">Agus Siregar</p>
+          <p class="mt-2 text-sm text-gray-700">
+            Kerangka kerja pembangunan daerah berbasis data dan kolaborasi.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            Lihat Buku &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Book Card 7 -->
+      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
+        <a href="#" class="block overflow-hidden">
+          <img src="images/globalis.png" alt="Cover buku 7" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-900">Sosiologi Perkotaan</h3>
+          <p class="mt-1 text-sm text-gray-500">Maya Lestari</p>
+          <p class="mt-2 text-sm text-gray-700">
+            Membahas mobilitas, ruang kota, dan dinamika komunitas urban.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            Lihat Buku &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Book Card 8 -->
+      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
+        <a href="#" class="block overflow-hidden">
+          <img src="images/govcore.png" alt="Cover buku 8" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-900">Politik Global Kontemporer</h3>
+          <p class="mt-1 text-sm text-gray-500">Dimas Prakoso</p>
+          <p class="mt-2 text-sm text-gray-700">
+            Analisis tren geopolitik, diplomasi, dan isu lintas batas.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            Lihat Buku &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Book Card 9 -->
+      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
+        <a href="#" class="block overflow-hidden">
+          <img src="images/relion.png" alt="Cover buku 9" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+        </a>
+        <div class="p-5">
+          <h3 class="text-lg font-semibold text-gray-900">Komunikasi & Media Publik</h3>
+          <p class="mt-1 text-sm text-gray-500">Sari Wulandari</p>
+          <p class="mt-2 text-sm text-gray-700">
+            Peran media dalam membentuk opini publik dan partisipasi warga.
+          </p>
+          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            Lihat Buku &rarr;
           </a>
         </div>
       </article>
