@@ -23,32 +23,14 @@
         },
       };
     </script>
+    <script src="components/header.js"></script>
   </head>
   <body class="font-onest bg-white text-gray-900">
-    <!-- Header -->
-    <header class="bg-white shadow-sm">
-      <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div class="flex h-16 items-center justify-between">
-          <a href="/index.html" class="text-black-600 font-semibold text-xl">Publion Research</a>
-          <nav class="hidden md:flex space-x-6 text-sm">
-            <a href="/about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
-            <a href="/katalog-buku.html" class="text-gray-600 hover:text-blue-600 transition">Books</a>
-            <a href="/journals.html" class="text-gray-600 hover:text-blue-600 transition">Journals</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600 transition">Research</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600 transition">Connect</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600 transition">Conference</a>
-          </nav>
-          <div class="hidden md:flex items-center gap-4">
-            <a href="/login.html" class="px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
-            <a href="/register.html" class="hidden stealm:inline-block px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
-          </div>
-        </div>
-      </div>
-    </header>
+    <div id="header"></div>
 
     <!-- Hero -->
     <section class="bg-gray-100">
-      <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-12 text-center">
+      <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 py-12 text-center">
         <h1 class="text-4xl font-bold text-gray-900">Katalog Buku</h1>
         <p class="mt-3 text-base text-gray-700 max-w-2xl mx-auto">
           Jelajahi koleksi buku terkurasi dari penerbit kami. Gunakan filter untuk menemukan judul yang sesuai.
@@ -57,7 +39,7 @@
     </section>
 
     <!-- Filters -->
-    <section class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
+    <section class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
         <input type="text" placeholder="Cari judul atau penulis" class="w-full border border-gray-200 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300" />
         <select class="w-full border border-gray-200 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300">
@@ -84,143 +66,158 @@
     </section>
 
     <!-- Book Grid -->
-    <section class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 pb-12">
+    <section class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 pb-12">
       <div class="flex items-center justify-between mb-6">
-        <p class="text-sm text-gray-500">Menampilkan 12 buku</p>
+        <p class="text-sm text-gray-500">Menampilkan 10 buku</p>
         <a href="#" class="text-sm font-medium text-blue-600 hover:underline">Download Katalog (PDF)</a>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
-          <a href="/detail-buku.html" class="block overflow-hidden">
-            <img src="images/globalis.png" alt="Cover buku" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          <a href="/books/metode-riset.html" class="block overflow-hidden">
+            <img src="images/1.jpg" alt="Cover buku Metode Riset Modern" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
           </a>
           <div class="p-5">
             <h3 class="text-lg font-semibold text-gray-900">Metode Riset Modern</h3>
-            <p class="mt-1 text-sm text-gray-500">Dr. Anisa Putri</p>
+            <p class="mt-1 text-sm text-gray-500">Dr. Anisa Putri, MA</p>
             <p class="mt-2 text-sm text-gray-700">Panduan ringkas desain riset, pengumpulan data, dan penulisan ilmiah.</p>
             <div class="mt-4 flex items-center justify-between">
-              <span class="text-sm font-semibold text-gray-900">Rp 120.000</span>
-              <a href="/detail-buku.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+              <span class="text-sm font-semibold text-gray-900">Rp 150.000</span>
+              <a href="/books/metode-riset.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
             </div>
           </div>
         </article>
 
         <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
-          <a href="/detail-buku.html" class="block overflow-hidden">
-            <img src="images/govcore.png" alt="Cover buku" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          <a href="/books/kebijakan-publik.html" class="block overflow-hidden">
+            <img src="images/2.jpg" alt="Cover buku Kebijakan Publik & Dampak Sosial" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
           </a>
           <div class="p-5">
             <h3 class="text-lg font-semibold text-gray-900">Kebijakan Publik & Dampak Sosial</h3>
-            <p class="mt-1 text-sm text-gray-500">Prof. Raka Santoso</p>
+            <p class="mt-1 text-sm text-gray-500">Prof. Raka Santoso, MPP</p>
             <p class="mt-2 text-sm text-gray-700">Studi kasus kebijakan dan pengaruhnya terhadap komunitas lokal.</p>
             <div class="mt-4 flex items-center justify-between">
-              <span class="text-sm font-semibold text-gray-900">Rp 145.000</span>
-              <a href="/detail-buku.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+              <span class="text-sm font-semibold text-gray-900">Rp 150.000</span>
+              <a href="/books/kebijakan-publik.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
             </div>
           </div>
         </article>
 
         <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
-          <a href="/detail-buku.html" class="block overflow-hidden">
-            <img src="images/relion.png" alt="Cover buku" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          <a href="/books/masa-depan.html" class="block overflow-hidden">
+            <img src="images/3.jpg" alt="Cover buku Masa Depan Regional" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
           </a>
           <div class="p-5">
             <h3 class="text-lg font-semibold text-gray-900">Masa Depan Regional</h3>
-            <p class="mt-1 text-sm text-gray-500">Laras Wijaya</p>
+            <p class="mt-1 text-sm text-gray-500">Haikal Valino</p>
             <p class="mt-2 text-sm text-gray-700">Membahas identitas lokal, budaya, dan dinamika perubahan wilayah.</p>
             <div class="mt-4 flex items-center justify-between">
-              <span class="text-sm font-semibold text-gray-900">Rp 130.000</span>
-              <a href="/detail-buku.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+              <span class="text-sm font-semibold text-gray-900">Rp 90.000</span>
+              <a href="/books/masa-depan.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
             </div>
           </div>
         </article>
 
         <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
-          <a href="/detail-buku.html" class="block overflow-hidden">
-            <img src="images/globalis.png" alt="Cover buku" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          <a href="/books/etika-akademik.html" class="block overflow-hidden">
+            <img src="images/4.jpg" alt="Cover buku Etika Akademik" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
           </a>
           <div class="p-5">
             <h3 class="text-lg font-semibold text-gray-900">Etika Akademik</h3>
-            <p class="mt-1 text-sm text-gray-500">Hendra Pratama</p>
+            <p class="mt-1 text-sm text-gray-500">Hendra Pratama, M.Pd.</p>
             <p class="mt-2 text-sm text-gray-700">Prinsip integritas, sitasi, dan etika riset untuk peneliti muda.</p>
             <div class="mt-4 flex items-center justify-between">
-              <span class="text-sm font-semibold text-gray-900">Rp 110.000</span>
-              <a href="/detail-buku.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+              <span class="text-sm font-semibold text-gray-900">Rp 120.000</span>
+              <a href="/books/etika-akademik.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
             </div>
           </div>
         </article>
 
         <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
-          <a href="/detail-buku.html" class="block overflow-hidden">
-            <img src="images/govcore.png" alt="Cover buku" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          <a href="/books/strategi-publikasi.html" class="block overflow-hidden">
+            <img src="images/5.jpg" alt="Cover buku Strategi Publikasi Ilmiah" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
           </a>
           <div class="p-5">
             <h3 class="text-lg font-semibold text-gray-900">Strategi Publikasi Ilmiah</h3>
-            <p class="mt-1 text-sm text-gray-500">Nadia Rahman</p>
+            <p class="mt-1 text-sm text-gray-500">Nadia Rahman, Ph.D.</p>
             <p class="mt-2 text-sm text-gray-700">Tips memilih jurnal, menyusun naskah, dan merespons reviewer.</p>
             <div class="mt-4 flex items-center justify-between">
-              <span class="text-sm font-semibold text-gray-900">Rp 125.000</span>
-              <a href="/detail-buku.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+              <span class="text-sm font-semibold text-gray-900">Rp 110.000</span>
+              <a href="/books/strategi-publikasi.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
             </div>
           </div>
         </article>
 
         <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
-          <a href="/detail-buku.html" class="block overflow-hidden">
-            <img src="images/relion.png" alt="Cover buku" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          <a href="/books/ekonomi-pembangunan.html" class="block overflow-hidden">
+            <img src="images/6.jpg" alt="Cover buku Ekonomi & Pembangunan Lokal" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
           </a>
           <div class="p-5">
             <h3 class="text-lg font-semibold text-gray-900">Ekonomi & Pembangunan Lokal</h3>
-            <p class="mt-1 text-sm text-gray-500">Agus Siregar</p>
+            <p class="mt-1 text-sm text-gray-500">Agus Siregar, M.Sc.</p>
             <p class="mt-2 text-sm text-gray-700">Kerangka kerja pembangunan daerah berbasis data dan kolaborasi.</p>
             <div class="mt-4 flex items-center justify-between">
-              <span class="text-sm font-semibold text-gray-900">Rp 150.000</span>
-              <a href="/detail-buku.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+              <span class="text-sm font-semibold text-gray-900">Rp 140.000</span>
+              <a href="/books/ekonomi-pembangunan.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
             </div>
           </div>
         </article>
 
         <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
-          <a href="/detail-buku.html" class="block overflow-hidden">
-            <img src="images/globalis.png" alt="Cover buku" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          <a href="/books/sosiologi-perkotaan.html" class="block overflow-hidden">
+            <img src="images/7.jpg" alt="Cover buku Sosiologi Perkotaan" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
           </a>
           <div class="p-5">
             <h3 class="text-lg font-semibold text-gray-900">Sosiologi Perkotaan</h3>
-            <p class="mt-1 text-sm text-gray-500">Maya Lestari</p>
+            <p class="mt-1 text-sm text-gray-500">Maya Lestari, M.Sos.</p>
             <p class="mt-2 text-sm text-gray-700">Membahas mobilitas, ruang kota, dan dinamika komunitas urban.</p>
             <div class="mt-4 flex items-center justify-between">
-              <span class="text-sm font-semibold text-gray-900">Rp 135.000</span>
-              <a href="/detail-buku.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+              <span class="text-sm font-semibold text-gray-900">Rp 150.000</span>
+              <a href="/books/sosiologi-perkotaan.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
             </div>
           </div>
         </article>
 
         <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
-          <a href="/detail-buku.html" class="block overflow-hidden">
-            <img src="images/govcore.png" alt="Cover buku" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          <a href="/books/politik-global.html" class="block overflow-hidden">
+            <img src="images/8.jpg" alt="Cover buku Politik Global Kontemporer" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
           </a>
           <div class="p-5">
             <h3 class="text-lg font-semibold text-gray-900">Politik Global Kontemporer</h3>
-            <p class="mt-1 text-sm text-gray-500">Dimas Prakoso</p>
+            <p class="mt-1 text-sm text-gray-500">Dimas Prakoso, M.I.P.</p>
             <p class="mt-2 text-sm text-gray-700">Analisis tren geopolitik, diplomasi, dan isu lintas batas.</p>
             <div class="mt-4 flex items-center justify-between">
-              <span class="text-sm font-semibold text-gray-900">Rp 160.000</span>
-              <a href="/detail-buku.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+              <span class="text-sm font-semibold text-gray-900">Rp 150.000</span>
+              <a href="/books/politik-global.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
             </div>
           </div>
         </article>
 
         <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
-          <a href="/detail-buku.html" class="block overflow-hidden">
-            <img src="images/relion.png" alt="Cover buku" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          <a href="/books/kontekstual-teaching.html" class="block overflow-hidden">
+            <img src="images/9.jpg" alt="Cover buku Kontekstual Teaching" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
           </a>
           <div class="p-5">
-            <h3 class="text-lg font-semibold text-gray-900">Komunikasi & Media Publik</h3>
-            <p class="mt-1 text-sm text-gray-500">Sari Wulandari</p>
-            <p class="mt-2 text-sm text-gray-700">Peran media dalam membentuk opini publik dan partisipasi warga.</p>
+            <h3 class="text-lg font-semibold text-gray-900">Kontekstual Teaching</h3>
+            <p class="mt-1 text-sm text-gray-500">Wati Susilawati</p>
+            <p class="mt-2 text-sm text-gray-700">Pembelajaran kontekstual agar proses belajar relevan dan bermakna.</p>
             <div class="mt-4 flex items-center justify-between">
-              <span class="text-sm font-semibold text-gray-900">Rp 115.000</span>
-              <a href="/detail-buku.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+              <span class="text-sm font-semibold text-gray-900">Rp 110.000</span>
+              <a href="/books/kontekstual-teaching.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+          <a href="/books/administrasi-sektor.html" class="block overflow-hidden">
+            <img src="images/10.jpg" alt="Cover buku Administrasi Sektor Publik" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          </a>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">Administrasi Sektor Publik</h3>
+            <p class="mt-1 text-sm text-gray-500">Fadjar Trisakti</p>
+            <p class="mt-2 text-sm text-gray-700">Administrasi publik untuk pelayanan profesional dan akuntabel.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm font-semibold text-gray-900">Rp 110.000</span>
+              <a href="/books/administrasi-sektor.html" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
             </div>
           </div>
         </article>
@@ -228,7 +225,7 @@
     </section>
 
     <!-- Pagination -->
-    <section class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 pb-16">
+    <section class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 pb-16">
       <div class="flex items-center justify-between text-sm text-gray-600">
         <span>Halaman 1 dari 3</span>
         <div class="flex items-center gap-2">
@@ -239,30 +236,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
-      <div class="max-w-screen-xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h3 class="text-xl font-bold mb-4">Publion Research</h3>
-          <p class="text-gray-400">Empowering knowledge through accessible and impactful research publications.</p>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Navigation</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Journals</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Contact</h4>
-          <p class="text-gray-400">Email: editor@publion.id</p>
-          <p class="text-gray-400">Phone: +62 812-3456-7890</p>
-        </div>
-      </div>
-      <div class="bg-gray-800 text-center py-4">
-        <p class="text-sm text-gray-400">&copy; 2025 PT Publion Research Ventures. All rights reserved.</p>
-      </div>
-    </footer>
+    <div id="footer"></div>
+    <script src="components/footer.js"></script>
   </body>
 </html>

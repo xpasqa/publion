@@ -17,69 +17,10 @@
         },
       };
     </script>
+    <script src="components/header.js"></script>
   </head>
-  
-      <!-- Header -->
-    <header class="bg-white shadow-sm">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex h-16 items-center justify-between">
-      <!-- Logo -->
-      <a href="/index.html" class="text-black-600 font-semibold text-xl">Publion Research</a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-6 text-sm">
-        <a href="/about.html" class="text-gray-600 hover:text-teal-600 transition">About</a>
-        <a href="/katalog-buku.html" class="text-gray-600 hover:text-teal-600 transition">Books</a>
-        <a href="/journals.html" class="text-gray-600 hover:text-teal-600 transition">Journals</a>
-        <a href="#" class="text-gray-600 hover:text-teal-600 transition">Research</a>
-        <a href="#" class="text-gray-600 hover:text-teal-600 transition">Connect</a>
-        <a href="#" class="text-gray-600 hover:text-teal-600 transition">Conference</a>
-      </nav>
-
-      <!-- Mobile Toggle -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Actions -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="/login.html" class="px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
-        <a href="/register.html" class="hidden sm:inline-block px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
-      </div>
-    </div>
-
-    <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-2 text-sm">
-  <a href="/about.html" class="block text-gray-700 hover:text-teal-600">About</a>
-  <a href="/katalog-buku.html" class="block text-gray-700 hover:text-teal-600">Books</a>
-  <a href="/journals.html" class="block text-gray-700 hover:text-teal-600">Journals</a>
-  <a href="#" class="block text-gray-700 hover:text-teal-600">Research</a>
-  <a href="#" class="block text-gray-700 hover:text-teal-600">Connect</a>
-  <a href="#" class="block text-gray-700 hover:text-teal-600">Conference</a>
-<div class="flex justify-between gap-2 mt-4 mb-6 pb-6">
-  <a href="/login.html" class="w-1/2 text-center px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
-  <a href="/register.html" class="w-1/2 text-center px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
-</div>
-  </div>
-</header>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  });
-</script>
-  </head>
-
   <body class="bg-white font-onest text-gray-900">
+    <div id="header"></div>
 
     <!-- Page Header -->
     <section class="bg-gray-50 py-16 px-4 text-center">
@@ -158,34 +99,8 @@
     
     
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
-      <div class="max-w-screen-xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h3 class="text-xl font-bold mb-4">Publion Research</h3>
-          <p class="text-gray-400">Empowering knowledge through accessible and impactful research publications.</p>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Navigation</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Journals</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Contact</h4>
-          <p class="text-gray-400">Email: info@publion.id</p>
-          <p class="text-gray-400">Phone: +62 812-3456-7890</p>
-          <div class="flex space-x-4 mt-4">
-            <!-- Social icons placeholder -->
-          </div>
-        </div>
-      </div>
-      <div class="bg-gray-800 text-center py-4">
-        <p class="text-sm text-gray-400">&copy; 2025 PT Publion Research Ventures. All rights reserved.</p>
-      </div>
-    </footer>
+    <div id="footer"></div>
+    <script src="components/footer.js"></script>
 
     
   </body>

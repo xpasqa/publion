@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Katalog Jurnal | Publion Research</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Onest -->
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Custom Font Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              onest: ['"Onest"', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="components/header.js"></script>
+  </head>
+  <body class="font-onest bg-white text-gray-900">
+    <div id="header"></div>
+
+    <!-- Hero -->
+    <section class="bg-gray-100">
+      <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 py-12 text-center">
+        <h1 class="text-4xl font-bold text-gray-900">Katalog Jurnal</h1>
+        <p class="mt-3 text-base text-gray-700 max-w-2xl mx-auto">
+          Jelajahi koleksi jurnal terkurasi dari Publion. Temukan fokus, scope, dan jurnal yang paling relevan untuk riset Anda.
+        </p>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <input type="text" placeholder="Cari judul atau bidang" class="w-full border border-gray-200 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300" />
+        <select class="w-full border border-gray-200 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300">
+          <option>Bidang</option>
+          <option>Administrasi Publik</option>
+          <option>Agama & Regional</option>
+          <option>Bisnis & Ekonomi</option>
+          <option>Sosiologi</option>
+          <option>Psikologi</option>
+        </select>
+        <select class="w-full border border-gray-200 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300">
+          <option>Status</option>
+          <option>Open Access</option>
+          <option>Peer Reviewed</option>
+          <option>In Progress</option>
+        </select>
+        <select class="w-full border border-gray-200 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-gray-300">
+          <option>Urutkan</option>
+          <option>A-Z</option>
+          <option>Terbaru</option>
+          <option>Terpopuler</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Journal Grid -->
+    <section class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 pb-12">
+      <div class="flex items-center justify-between mb-6">
+        <p class="text-sm text-gray-500">Menampilkan 10 jurnal</p>
+        <a href="#" class="text-sm font-medium text-blue-600 hover:underline">Download Katalog (PDF)</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+          <a href="https://publion.org/journals/govcore/" target="_blank" class="block overflow-hidden">
+            <img src="images/govcore.jpg" alt="Govcore journal cover" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          </a>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">Govcore: Journal of Administration and Governance System</h3>
+            <p class="mt-2 text-sm text-gray-700">Covers studies on public administration, governance systems, and institutional development.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-gray-500">Administration</span>
+              <a href="https://publion.org/journals/govcore/" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+          <a href="https://publion.org/journals/legion/" target="_blank" class="block overflow-hidden">
+            <img src="images/legion.jpg" alt="Legion journal cover" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          </a>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">Legion: Journal of Religion and Regional</h3>
+            <p class="mt-2 text-sm text-gray-700">Explores the connection between religion’s role in regional identity, politics, and societal transformation.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-gray-500">Religion</span>
+              <a href="https://publion.org/journals/legion/" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+          <a href="https://publion.org/journals/venture/" target="_blank" class="block overflow-hidden">
+            <img src="images/ventura.jpg" alt="Venture journal cover" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          </a>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">Venture: Journal of Business and Economic</h3>
+            <p class="mt-2 text-sm text-gray-700">Publishes research on business, economics, entrepreneurship, and innovation across emerging markets.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-gray-500">Business</span>
+              <a href="https://publion.org/journals/venture/" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+          <a href="https://publion.org/journals/cognitia/" target="_blank" class="block overflow-hidden">
+            <img src="images/cognitia.jpg" alt="Cognitia journal cover" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          </a>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">Cognitia: Journal of Psychology and Human Behavior</h3>
+            <p class="mt-2 text-sm text-gray-700">Covers psychology research on human behavior, cognition, mental health, and social interaction.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-gray-500">Psychology</span>
+              <a href="https://publion.org/journals/cognitia/" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+          <a href="https://publion.org/journals/civitas/" target="_blank" class="block overflow-hidden">
+            <img src="images/civitas.jpg" alt="Civitas journal cover" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          </a>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">Civitas: Journal of Community and Development</h3>
+            <p class="mt-2 text-sm text-gray-700">Covers community-based research on development, empowerment, social innovation, and applied programs.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-gray-500">Community</span>
+              <a href="https://publion.org/journals/civitas/" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+          <a href="https://publion.org/journals/comun/" target="_blank" class="block overflow-hidden">
+            <img src="images/comun.jpg" alt="Comun journal cover" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          </a>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">Comun: Journal of Communication and Digital Society</h3>
+            <p class="mt-2 text-sm text-gray-700">Publishes research on communication, digital society, media ecosystems, and online public discourse.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-gray-500">Communication</span>
+              <a href="https://publion.org/journals/comun/" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+          <a href="https://publion.org/journals/elevate/" target="_blank" class="block overflow-hidden">
+            <img src="images/elevate.jpg" alt="Elevate journal cover" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          </a>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">Elevate: Journal of Education and Learning</h3>
+            <p class="mt-2 text-sm text-gray-700">Focuses on education research, learning innovation, pedagogy, and evidence-based policy in schools.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-gray-500">Education</span>
+              <a href="https://publion.org/journals/elevate/" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+          <a href="https://publion.org/journals/ecologic/" target="_blank" class="block overflow-hidden">
+            <img src="images/ecologic.jpg" alt="Ecologic journal cover" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          </a>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">Ecologic: Journal of Environmental and Policy Studies</h3>
+            <p class="mt-2 text-sm text-gray-700">Publishes research on environment, sustainability, climate policy, and governance for resilient futures.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-gray-500">Environment</span>
+              <a href="https://publion.org/journals/ecologic/" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+          <a href="https://publion.org/journals/globalist/" target="_blank" class="block overflow-hidden">
+            <img src="images/globalist.jpg" alt="Globalist journal cover" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          </a>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">Globalist: Journal of Global Politics and Diplomacy</h3>
+            <p class="mt-2 text-sm text-gray-700">Publishes research on global politics, diplomacy, and regional governance, with focus on the Global South.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-gray-500">Politics</span>
+              <a href="https://publion.org/journals/globalist/" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+          <a href="https://publion.org/journals/veritas/" target="_blank" class="block overflow-hidden">
+            <img src="images/veritas.jpg" alt="Veritas journal cover" class="w-full aspect-[3/4] object-cover transition-transform duration-300 hover:scale-105" />
+          </a>
+          <div class="p-5">
+            <h3 class="text-lg font-semibold text-gray-900">Veritas: Journal of Sociology and Social Reality</h3>
+            <p class="mt-2 text-sm text-gray-700">Publishes sociological research on social reality, inequality, culture, and contemporary social change.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-sm text-gray-500">Sociology</span>
+              <a href="https://publion.org/journals/veritas/" class="text-sm font-medium text-blue-600 hover:underline">Detail</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 pb-16">
+      <div class="flex items-center justify-between text-sm text-gray-600">
+        <span>Halaman 1 dari 1</span>
+        <div class="flex items-center gap-2">
+          <button class="px-3 py-2 border border-gray-300 rounded-md hover:bg-gray-100">Sebelumnya</button>
+          <button class="px-3 py-2 border border-gray-300 rounded-md hover:bg-gray-100">Berikutnya</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="components/footer.js"></script>
+  </body>
+</html>

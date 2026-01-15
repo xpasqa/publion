@@ -4,119 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publion Research</title>
-
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts: Onest -->
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="components/header.js"></script>
+     <script src="components/style.js"></script>
 
-    <!-- Tailwind Custom Font Config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              onest: ['"Onest"', 'sans-serif'],
-            },
-          },
-        },
-      };
-    </script>
-    
-    
-     <!-- Header -->
-    <header class="bg-white shadow-sm">
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex h-16 items-center justify-between">
-      <!-- Logo -->
-      <a href="#" class="text-black-600 font-semibold text-xl">Publion Research</a>
-
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex space-x-6 text-sm">
-        <a href="/about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
-        <a href="/katalog-buku.html" class="text-gray-600 hover:text-blue-600 transition">Books</a>
-        <a href="/journals.html" class="text-gray-600 hover:text-blue-600 transition">Journals</a>
-        <a href="#" class="text-gray-600 hover:text-blue-600 transition">Research</a>
-        <a href="#" class="text-gray-600 hover:text-blue-600 transition">Connect</a>
-        <a href="#" class="text-gray-600 hover:text-blue-600 transition">Conference</a>
-      </nav>
-
-      <!-- Mobile Toggle -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Actions -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="/login.html" class="px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
-        <a href="/register.html" class="hidden stealm:inline-block px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
-      </div>
-    </div>
-
-    <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="md:hidden hidden flex-col mt-4 space-y-2 text-sm">
-  <a href="/about.html" class="block text-gray-700 hover:text-teal-600">About</a>
-  <a href="/katalog-buku.html" class="block text-gray-700 hover:text-teal-600">Books</a>
-  <a href="/journals.html" class="block text-gray-700 hover:text-teal-600">Journals</a>
-  <a href="#" class="block text-gray-700 hover:text-teal-600">Research</a>
-  <a href="#" class="block text-gray-700 hover:text-teal-600">Connect</a>
-  <a href="#" class="block text-gray-700 hover:text-teal-600">Conference</a>
-<div class="flex justify-between gap-2 mt-4 mb-6 pb-6">
-  <a href="/login.html" class="w-1/2 text-center px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
-  <a href="/register.html" class="w-1/2 text-center px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
-</div>
-  </div>
-</header>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const bookScroll = document.getElementById('book-scroll');
-
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    if (bookScroll) {
-      let isDown = false;
-      let startX = 0;
-      let scrollLeft = 0;
-
-      bookScroll.addEventListener('mousedown', (event) => {
-        isDown = true;
-        bookScroll.classList.add('cursor-grabbing');
-        startX = event.pageX - bookScroll.offsetLeft;
-        scrollLeft = bookScroll.scrollLeft;
-      });
-
-      bookScroll.addEventListener('mouseleave', () => {
-        isDown = false;
-        bookScroll.classList.remove('cursor-grabbing');
-      });
-
-      bookScroll.addEventListener('mouseup', () => {
-        isDown = false;
-        bookScroll.classList.remove('cursor-grabbing');
-      });
-
-      bookScroll.addEventListener('mousemove', (event) => {
-        if (!isDown) return;
-        event.preventDefault();
-        const x = event.pageX - bookScroll.offsetLeft;
-        const walk = x - startX;
-        bookScroll.scrollLeft = scrollLeft - walk;
-      });
-    }
-  });
-</script>
   </head>
-
+  <body class="font-onest bg-white text-gray-900">
+    <div id="header"></div>
 
     <!-- Hero Banner -->
     <section class="relative h-[450px] bg-cover bg-center flex items-center justify-center text-white text-center" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1950&q=80');">
@@ -145,7 +40,7 @@
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
     <!-- Card 1 -->
-    <a href="#" class="block bg-gray-50 rounded-lg shadow-sm p-6 hover:bg-gray-100 transition">
+    <a href="#" class="block bg-gray-50 rounded-lg shadow-lg p-6 hover:bg-gray-100 transition">
       <h4 class="text-md font-semibold text-gray-800 mb-2">Find a journal</h4>
       <p class="text-sm text-gray-600">
         We have a home for your research. Our journals cover more than 1,700 academic disciplines.
@@ -153,7 +48,7 @@
     </a>
 
     <!-- Card 2 -->
-    <a href="#" class="block bg-gray-50 rounded-lg shadow-sm p-6 hover:bg-gray-100 transition">
+    <a href="#" class="block bg-gray-50 rounded-lg shadow-lg p-6 hover:bg-gray-100 transition">
       <h4 class="text-md font-semibold text-gray-800 mb-2">Find a topic</h4>
       <p class="text-sm text-gray-600">
         Research Topics unite top minds around emerging themes. Join or create your own.
@@ -161,80 +56,13 @@
     </a>
 
     <!-- Card 3 -->
-    <a href="#" class="block bg-gray-50 rounded-lg shadow-sm p-6 hover:bg-gray-100 transition">
+    <a href="#" class="block bg-gray-50 rounded-lg shadow-lg p-6 hover:bg-gray-100 transition">
       <h4 class="text-md font-semibold text-gray-800 mb-2">Submit your research</h4>
       <p class="text-sm text-gray-600">
         Ready to publish? Submit now and make greater impact with us.
       </p>
     </a>
 
-  </div>
-</section>
-
-<!-- Journal Cards Section -->
-<section class="bg-gray-100 py-12 text-white">
-  <h2 class="text-3xl font-bold text-center text-gray-900 mb-2">Journal Edition</h2>
-  <p class="text-center text-gray-700 text-base font-light mb-10 max-w-2xl mx-auto">
-    Discover our curated collection of high-impact journals across disciplines. Each journal is peer-reviewed, accessible, and dedicated to advancing meaningful research.
-  </p>
-  <div class="max-w-5xl mx-auto px-6 md:px-16">
-    <div class="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory">
-
-      <!-- Blog Card 1 -->
-      <article class="text-left">
-        <a href="https://publion.org/journals/globalis/" target="_blank">
-          <img src="images/globalis.png" alt="Journal Cover" class="w-full h-180 object-cover rounded-md" />
-        </a>
-        <div class="bg-transparent py-4">
-          <a href="https://publion.org/journals/globalis/">
-            <h3 class="text-lg font-semibold text-gray-900">Globalis: Journal of Global and Regional Politics</h3>
-          </a>
-          <p class="mt-2 text-sm text-gray-700">
-       Publishes research on global politics, diplomacy, and regional governance, with focus on the Global South.
-          </p>
-          <a href="https://publion.org/journals/globalis/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
-            View Journal &rarr;
-          </a>
-        </div>
-      </article>
-
-      <!-- Blog Card 2 -->
-      <article class="text-left">
-        <a href="https://publion.org/journals/govcore/" target="_blank">
-          <img src="images/govcore.png" alt="Journal Cover" class="w-full h-180 object-cover rounded-md" />
-        </a>
-        <div class="bg-transparent py-4">
-          <a href="https://publion.org/journals/govcore/">
-            <h3 class="text-lg font-semibold text-gray-900"> GovCore: Administration and Governance Systems</h3>
-          </a>
-          <p class="mt-2 text-sm text-gray-700">
-          Covers studies on public administration, governance systems, and institutional development.
-          </p>
-          <a href="https://publion.org/journals/govcore/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
-            View Journal &rarr;
-          </a>
-        </div>
-      </article>
-
-      <!-- Blog Card 3 -->
-      <article class="text-left">
-        <a href="https://publion.org/journals/relion/" target="_blank">
-          <img src="images/relion.png" alt="Journal Cover" class="w-full h-180 object-cover rounded-md" />
-        </a>
-        <div class="bg-transparent py-4">
-          <a href="https://publion.org/journals/relion/">
-            <h3 class="text-lg font-semibold text-gray-900">Relion : Journal of Religion and Regional</h3>
-          </a>
-          <p class="mt-2 text-sm text-gray-700">
-          Explores the connection between religion’s role in regional identity, politics, and societal transformation.
-          </p>
-          <a href="https://publion.org/journals/relion/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
-            View Journal &rarr;
-          </a>
-        </div>
-      </article>
-
-    </div>
   </div>
 </section>
 
@@ -251,157 +79,367 @@
     </div>
   </div>
   <div class="max-w-7xl mx-auto px-4 md:px-6 mt-10">
-    <div id="book-scroll" class="flex flex-nowrap gap-6 overflow-x-auto pb-4 snap-x snap-mandatory cursor-grab">
+    <div class="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-5">
 
       <!-- Book Card 1 -->
-      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
-        <a href="#" class="block overflow-hidden">
-          <img src="images/globalis.png" alt="Cover buku 1" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+      <article class="group text-left flex gap-4 md:block">
+        <a href="/books/metode-riset.html" class="block overflow-hidden md:h-120">
+          <img src="images/1.jpg" alt="Cover buku 1" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
         </a>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-gray-900">Metode Riset Modern</h3>
-          <p class="mt-1 text-sm text-gray-500">Dr. Anisa Putri</p>
+        <div class="pt-0 md:pt-4">
+          <h3 class="book-title text-lg font-semibold text-gray-900">Metode Riset Modern</h3>
+          <p class="mt-1 text-sm text-gray-500">Dr. Anisa Putri, MA</p>
           <p class="mt-2 text-sm text-gray-700">
-            Panduan ringkas tentang desain riset, pengumpulan data, dan penulisan ilmiah.
+            Buku ini memandu riset modern integratif dengan pendekatan metodologis dan teknologi digital.
           </p>
-          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+          <a href="/books/metode-riset.html" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
             Lihat Buku &rarr;
           </a>
         </div>
       </article>
 
       <!-- Book Card 2 -->
-      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
-        <a href="#" class="block overflow-hidden">
-          <img src="images/govcore.png" alt="Cover buku 2" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+      <article class="group text-left flex gap-4 md:block">
+        <a href="/books/kebijakan-publik.html" class="block overflow-hidden md:h-120">
+          <img src="images/2.jpg" alt="Cover buku 2" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
         </a>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-gray-900">Kebijakan Publik & Dampak Sosial</h3>
-          <p class="mt-1 text-sm text-gray-500">Prof. Raka Santoso</p>
+        <div class="pt-0 md:pt-4">
+          <h3 class="book-title text-lg font-semibold text-gray-900">Kebijakan Publik & Dampak Sosial</h3>
+          <p class="mt-1 text-sm text-gray-500">Prof. Raka Santoso, MPP</p>
           <p class="mt-2 text-sm text-gray-700">
-            Studi kasus kebijakan dan pengaruhnya terhadap komunitas lokal.
+            Buku ini membahas analisis kebijakan publik dan pengukuran dampak sosial berkeadilan.
           </p>
-          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+          <a href="/books/kebijakan-publik.html" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
             Lihat Buku &rarr;
           </a>
         </div>
       </article>
 
       <!-- Book Card 3 -->
-      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
-        <a href="#" class="block overflow-hidden">
-          <img src="images/relion.png" alt="Cover buku 3" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+      <article class="group text-left flex gap-4 md:block">
+        <a href="/books/masa-depan.html" class="block overflow-hidden md:h-120">
+          <img src="images/3.jpg" alt="Cover buku 3" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
         </a>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-gray-900">Masa Depan Regional</h3>
-          <p class="mt-1 text-sm text-gray-500">Laras Wijaya</p>
+        <div class="pt-0 md:pt-4">
+          <h3 class="book-title text-lg font-semibold text-gray-900">Masa Depan Regional</h3>
+          <p class="mt-1 text-sm text-gray-500">Haikal Valino</p>
           <p class="mt-2 text-sm text-gray-700">
-            Membahas identitas lokal, budaya, dan dinamika perubahan wilayah.
+            Buku ini mengulas strategi pembangunan regional menghadapi perubahan global dan ketidakpastian.
           </p>
-          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+          <a href="/books/masa-depan.html" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
             Lihat Buku &rarr;
           </a>
         </div>
       </article>
 
       <!-- Book Card 4 -->
-      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
-        <a href="#" class="block overflow-hidden">
-          <img src="images/globalis.png" alt="Cover buku 4" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+      <article class="group text-left flex gap-4 md:block">
+        <a href="/books/etika-akademik.html" class="block overflow-hidden md:h-120">
+          <img src="images/4.jpg" alt="Cover buku 4" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
         </a>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-gray-900">Etika Akademik</h3>
-          <p class="mt-1 text-sm text-gray-500">Hendra Pratama</p>
+        <div class="pt-0 md:pt-4">
+          <h3 class="book-title text-lg font-semibold text-gray-900">Etika Akademik</h3>
+          <p class="mt-1 text-sm text-gray-500">Hendra Pratama, M.Pd.</p>
           <p class="mt-2 text-sm text-gray-700">
-            Prinsip integritas, sitasi, dan etika riset untuk peneliti muda.
+            Buku ini menuntun integritas akademik dalam riset, penulisan, dan publikasi ilmiah.
           </p>
-          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+          <a href="/books/etika-akademik.html" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
             Lihat Buku &rarr;
           </a>
         </div>
       </article>
 
       <!-- Book Card 5 -->
-      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
-        <a href="#" class="block overflow-hidden">
-          <img src="images/govcore.png" alt="Cover buku 5" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+      <article class="group text-left flex gap-4 md:block">
+        <a href="/books/strategi-publikasi.html" class="block overflow-hidden md:h-120">
+          <img src="images/5.jpg" alt="Cover buku 5" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
         </a>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-gray-900">Strategi Publikasi Ilmiah</h3>
-          <p class="mt-1 text-sm text-gray-500">Nadia Rahman</p>
+        <div class="pt-0 md:pt-4">
+          <h3 class="book-title text-lg font-semibold text-gray-900">Strategi Publikasi Ilmiah</h3>
+          <p class="mt-1 text-sm text-gray-500">Nadia Rahman, Ph.D.</p>
           <p class="mt-2 text-sm text-gray-700">
-            Tips memilih jurnal, menyusun naskah, dan merespons reviewer.
+            Buku ini memandu strategi menulis dan menerbitkan artikel di jurnal bereputasi.
           </p>
-          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+          <a href="/books/strategi-publikasi.html" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
             Lihat Buku &rarr;
           </a>
         </div>
       </article>
 
       <!-- Book Card 6 -->
-      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
-        <a href="#" class="block overflow-hidden">
-          <img src="images/relion.png" alt="Cover buku 6" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+      <article class="group text-left flex gap-4 md:block">
+        <a href="/books/ekonomi-pembangunan.html" class="block overflow-hidden md:h-120">
+          <img src="images/6.jpg" alt="Cover buku 6" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
         </a>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-gray-900">Ekonomi & Pembangunan Lokal</h3>
-          <p class="mt-1 text-sm text-gray-500">Agus Siregar</p>
+        <div class="pt-0 md:pt-4">
+          <h3 class="book-title text-lg font-semibold text-gray-900">Ekonomi & Pembangunan Lokal</h3>
+          <p class="mt-1 text-sm text-gray-500">Agus Siregar, M.Sc.</p>
           <p class="mt-2 text-sm text-gray-700">
-            Kerangka kerja pembangunan daerah berbasis data dan kolaborasi.
+            Buku ini membahas pembangunan ekonomi lokal untuk kesejahteraan dan keadilan wilayah.
           </p>
-          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+          <a href="/books/ekonomi-pembangunan.html" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
             Lihat Buku &rarr;
           </a>
         </div>
       </article>
 
       <!-- Book Card 7 -->
-      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
-        <a href="#" class="block overflow-hidden">
-          <img src="images/globalis.png" alt="Cover buku 7" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+      <article class="group text-left flex gap-4 md:block">
+        <a href="/books/sosiologi-perkotaan.html" class="block overflow-hidden md:h-120">
+          <img src="images/7.jpg" alt="Cover buku 7" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
         </a>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-gray-900">Sosiologi Perkotaan</h3>
-          <p class="mt-1 text-sm text-gray-500">Maya Lestari</p>
+        <div class="pt-0 md:pt-4">
+          <h3 class="book-title text-lg font-semibold text-gray-900">Sosiologi Perkotaan</h3>
+          <p class="mt-1 text-sm text-gray-500">Maya Lestari, M.Sos.</p>
           <p class="mt-2 text-sm text-gray-700">
-            Membahas mobilitas, ruang kota, dan dinamika komunitas urban.
+            Buku ini mengkaji dinamika sosial kota, ketimpangan, dan perubahan kehidupan urban.
           </p>
-          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+          <a href="/books/sosiologi-perkotaan.html" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
             Lihat Buku &rarr;
           </a>
         </div>
       </article>
 
       <!-- Book Card 8 -->
-      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
-        <a href="#" class="block overflow-hidden">
-          <img src="images/govcore.png" alt="Cover buku 8" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+      <article class="group text-left flex gap-4 md:block">
+        <a href="/books/politik-global.html" class="block overflow-hidden md:h-120">
+          <img src="images/8.jpg" alt="Cover buku 8" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
         </a>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-gray-900">Politik Global Kontemporer</h3>
-          <p class="mt-1 text-sm text-gray-500">Dimas Prakoso</p>
+        <div class="pt-0 md:pt-4">
+          <h3 class="book-title text-lg font-semibold text-gray-900">Politik Global Kontemporer</h3>
+          <p class="mt-1 text-sm text-gray-500">Dimas Prakoso, M.I.P.</p>
           <p class="mt-2 text-sm text-gray-700">
-            Analisis tren geopolitik, diplomasi, dan isu lintas batas.
+            Buku ini menjelaskan dinamika politik global dan implikasinya bagi Indonesia.
           </p>
-          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+          <a href="/books/politik-global.html" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
             Lihat Buku &rarr;
           </a>
         </div>
       </article>
 
-      <!-- Book Card 9 -->
-      <article class="min-w-[260px] max-w-[260px] bg-gray-50 rounded-lg shadow-sm overflow-hidden snap-start">
-        <a href="#" class="block overflow-hidden">
-          <img src="images/relion.png" alt="Cover buku 9" class="w-full h-180 object-cover transition-transform duration-300 hover:scale-105" />
+      <!-- Book Card 10 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="/books/kontekstual-teaching.html" class="block overflow-hidden md:h-120">
+          <img src="images/9.jpg" alt="Cover buku 9" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
         </a>
-        <div class="p-5">
-          <h3 class="text-lg font-semibold text-gray-900">Komunikasi & Media Publik</h3>
-          <p class="mt-1 text-sm text-gray-500">Sari Wulandari</p>
+        <div class="pt-0 md:pt-4">
+          <h3 class="book-title text-lg font-semibold text-gray-900">Kontekstual Teaching</h3>
+          <p class="mt-1 text-sm text-gray-500">Wati Susilawati</p>
           <p class="mt-2 text-sm text-gray-700">
-            Peran media dalam membentuk opini publik dan partisipasi warga.
+            Buku ini memandu pembelajaran kontekstual agar proses belajar relevan dan bermakna.
           </p>
-          <a href="#" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+          <a href="/books/kontekstual-teaching.html" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
             Lihat Buku &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Book Card 11 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="/books/administrasi-sektor.html" class="block overflow-hidden md:h-120">
+          <img src="images/10.jpg" alt="Cover buku 10" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
+        </a>
+        <div class="pt-0 md:pt-4">
+          <h3 class="book-title text-lg font-semibold text-gray-900">Administrasi Sektor Publik</h3>
+          <p class="mt-1 text-sm text-gray-500">Fadjar Trisakti</p>
+          <p class="mt-2 text-sm text-gray-700">
+            Buku ini membahas administrasi sektor publik untuk pelayanan profesional dan akuntabel.
+          </p>
+          <a href="/books/administrasi-sektor.html" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            Lihat Buku &rarr;
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Journal Cards Section -->
+<section class="bg-gray-100 py-12 text-white">
+  <h2 class="text-3xl font-bold text-center text-gray-900 mb-2">Journal Edition</h2>
+  <p class="text-center text-gray-700 text-base font-light mb-10 max-w-2xl mx-auto">
+    Discover our curated collection of high-impact journals across disciplines. Each journal is peer-reviewed, accessible, and dedicated to advancing meaningful research.
+  </p>
+  <div class="max-w-7xl mx-auto px-4 md:px-6">
+    <div class="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-8 lg:grid-cols-5">
+
+      <!-- Journal Card 1 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="https://publion.org/journals/govcore/" target="_blank" class="block overflow-hidden md:h-120">
+          <img src="images/govcore.jpg" alt="Govcore journal cover" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
+        </a>
+        <div class="pt-0 md:pt-4">
+          <a href="https://publion.org/journals/govcore/">
+            <h3 class="text-lg font-semibold text-gray-900">Govcore: Journal of Administration and Governance System</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Covers studies on public administration, governance systems, and institutional development.
+          </p>
+          <a href="https://publion.org/journals/govcore/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Journal Card 2 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="https://publion.org/journals/legion/" target="_blank" class="block overflow-hidden md:h-120">
+          <img src="images/legion.jpg" alt="Legion journal cover" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
+        </a>
+        <div class="pt-0 md:pt-4">
+          <a href="https://publion.org/journals/legion/">
+            <h3 class="text-lg font-semibold text-gray-900">Legion: Journal of Religion and Regional</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Explores the connection between religion’s role in regional identity, politics, and societal transformation.
+          </p>
+          <a href="https://publion.org/journals/legion/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Journal Card 3 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="https://publion.org/journals/venture/" target="_blank" class="block overflow-hidden md:h-120">
+          <img src="images/ventura.jpg" alt="Venture journal cover" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
+        </a>
+        <div class="pt-0 md:pt-4">
+          <a href="https://publion.org/journals/venture/">
+            <h3 class="text-lg font-semibold text-gray-900">Venture: Journal of Business and Economic</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Publishes research on business, economics, entrepreneurship, and innovation across emerging markets.
+          </p>
+          <a href="https://publion.org/journals/venture/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Journal Card 4 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="https://publion.org/journals/cognitia/" target="_blank" class="block overflow-hidden md:h-120">
+          <img src="images/cognitia.jpg" alt="Cognitia journal cover" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
+        </a>
+        <div class="pt-0 md:pt-4">
+          <a href="https://publion.org/journals/cognitia/">
+            <h3 class="text-lg font-semibold text-gray-900">Cognitia: Journal of Psychology and Human Behavior</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Covers psychology research on human behavior, cognition, mental health, and social interaction.
+          </p>
+          <a href="https://publion.org/journals/cognitia/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Journal Card 5 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="https://publion.org/journals/civitas/" target="_blank" class="block overflow-hidden md:h-120">
+          <img src="images/civitas.jpg" alt="Civitas journal cover" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
+        </a>
+        <div class="pt-0 md:pt-4">
+          <a href="https://publion.org/journals/civitas/">
+            <h3 class="text-lg font-semibold text-gray-900">Civitas : Journal of Community and Development</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Covers community-based research on development, empowerment, social innovation, and applied programs.
+          </p>
+          <a href="https://publion.org/journals/civitas/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Journal Card 6 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="https://publion.org/journals/comun/" target="_blank" class="block overflow-hidden md:h-120">
+          <img src="images/comun.jpg" alt="Comun journal cover" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
+        </a>
+        <div class="pt-0 md:pt-4">
+          <a href="https://publion.org/journals/comun/">
+            <h3 class="text-lg font-semibold text-gray-900">Comun: Journal of Communication and Digital Society</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Publishes research on communication, digital society, media ecosystems, and online public discourse.
+          </p>
+          <a href="https://publion.org/journals/comun/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Journal Card 7 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="https://publion.org/journals/elevate/" target="_blank" class="block overflow-hidden md:h-120">
+          <img src="images/elevate.jpg" alt="Elevate journal cover" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
+        </a>
+        <div class="pt-0 md:pt-4">
+          <a href="https://publion.org/journals/elevate/">
+            <h3 class="text-lg font-semibold text-gray-900">Elevate: Journal of Education and Learning</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Focuses on education research, learning innovation, pedagogy, and evidence-based policy in schools.
+          </p>
+          <a href="https://publion.org/journals/elevate/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Journal Card 8 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="https://publion.org/journals/ecologic/" target="_blank" class="block overflow-hidden md:h-120">
+          <img src="images/ecologic.jpg" alt="Ecologic journal cover" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
+        </a>
+        <div class="pt-0 md:pt-4">
+          <a href="https://publion.org/journals/ecologic/">
+            <h3 class="text-lg font-semibold text-gray-900">Ecologic: Journal of Environmental and Policy Studies</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Publishes research on environment, sustainability, climate policy, and governance for resilient futures.
+          </p>
+          <a href="https://publion.org/journals/ecologic/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Journal Card 9 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="https://publion.org/journals/globalist/" target="_blank" class="block overflow-hidden md:h-120">
+          <img src="images/globalist.jpg" alt="Globalist journal cover" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
+        </a>
+        <div class="pt-0 md:pt-4">
+          <a href="https://publion.org/journals/globalist/">
+            <h3 class="text-lg font-semibold text-gray-900">Globalist: Journal of Global Politics and Diplomacy</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Publishes research on global politics, diplomacy, and regional governance, with focus on the Global South.
+          </p>
+          <a href="https://publion.org/journals/globalist/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
+          </a>
+        </div>
+      </article>
+
+      <!-- Journal Card 10 -->
+      <article class="group text-left flex gap-4 md:block">
+        <a href="https://publion.org/journals/veritas/" target="_blank" class="block overflow-hidden md:h-120">
+          <img src="images/veritas.jpg" alt="Veritas journal cover" class="w-24 aspect-[705/1125] h-auto object-cover shadow-lg rounded-md md:rounded-xl flex-shrink-0 transition-transform duration-300 group-hover:scale-105 md:w-full md:h-full" />
+        </a>
+        <div class="pt-0 md:pt-4">
+          <a href="https://publion.org/journals/veritas/">
+            <h3 class="text-lg font-semibold text-gray-900">Veritas: Journal of Sociology and Social Reality</h3>
+          </a>
+          <p class="mt-2 text-sm text-gray-700">
+            Publishes sociological research on social reality, inequality, culture, and contemporary social change.
+          </p>
+          <a href="https://publion.org/journals/veritas/" class="mt-3 inline-block text-sm font-medium text-blue-600 hover:underline">
+            View Journal &rarr;
           </a>
         </div>
       </article>
@@ -423,34 +461,8 @@
 </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white">
-      <div class="max-w-screen-xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
-          <h3 class="text-xl font-bold mb-4">Publion Research</h3>
-          <p class="text-gray-400">Empowering knowledge through accessible and impactful research publications.</p>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Navigation</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Journals</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold mb-4">Contact</h4>
-          <p class="text-gray-400">Email: editor@publion.id</p>
-          <p class="text-gray-400">Phone: +62 812-3456-7890</p>
-          <div class="flex space-x-4 mt-4">
-            <!-- Social icons placeholder -->
-          </div>
-        </div>
-      </div>
-      <div class="bg-gray-800 text-center py-4">
-        <p class="text-sm text-gray-400">&copy; 2025 PT Publion Research Ventures. All rights reserved.</p>
-      </div>
-    </footer>
+    <div id="footer"></div>
+    <script src="components/footer.js"></script>
 
   </body>
 </html>
