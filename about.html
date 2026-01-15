@@ -29,102 +29,193 @@
     <div id="header"></div>
 
     <!-- Hero -->
-    <section class="bg-gray-100">
-      <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-12 text-center">
-        <h1 class="text-4xl font-bold text-gray-900">Tentang Publion</h1>
-        <p class="mt-3 text-base text-gray-700 max-w-2xl mx-auto">
-          Publion adalah ekosistem riset yang menghubungkan peneliti, jurnal, dan pembaca untuk mempercepat
-          dampak akademik.
-        </p>
+    <section id="about" class="relative overflow-hidden">
+      <div class="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1585468274952-66591eb14165?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          class="h-full w-full object-cover"
+        />
+        <div class="absolute inset-0 bg-white/85"></div>
+      </div>
+      <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-gradient-to-br from-[#0b1f3a]/15 to-transparent"></div>
+      <div class="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-gradient-to-tr from-[#0b1f3a]/10 to-transparent"></div>
+      <div class="relative max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-sm uppercase tracking-widest text-gray-500">PT Publion Research Ventures</p>
+            <h1 class="mt-3 text-4xl md:text-5xl font-semibold text-gray-900">About Publion</h1>
+            <p class="mt-5 text-lg text-gray-700 leading-relaxed">
+              Publion percaya riset yang baik tidak boleh hanya menjadi laporan arsip dan dilupakan begitu saja. Setiap
+              pengetahuan dari sebuah pemikiran diciptakan untuk dibaca dan dipahami melampaui ruang batas akademik agar
+              dapat memperkaya cara manusia memahami dunia dengan lebih baik.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a href="#" class="px-6 py-3 bg-[#0b1f3a] text-white text-sm font-semibold rounded-full hover:bg-[#0e2a4f] transition">
+                Download Annual Report
+              </a>
+            </div>
+          </div>
+          <div class="hidden lg:block">
+            <div class="rounded-3xl border border-gray-100 bg-white p-10 shadow-sm">
+              <div class="space-y-4 text-gray-700">
+                <div class="h-2 w-20 rounded-full bg-gray-200"></div>
+                <div class="h-2 w-28 rounded-full bg-gray-200"></div>
+                <div class="h-2 w-16 rounded-full bg-gray-200"></div>
+                <div class="mt-6 text-sm text-gray-500">
+                  Publion menyusun pengetahuan dengan ketelitian akademik, sekaligus membuka akses agar gagasan dapat
+                  bergerak ke ranah publik yang lebih luas.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Story -->
-    <section class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-12">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-        <div>
-          <h2 class="text-2xl font-semibold text-gray-900">Misi Kami</h2>
-          <p class="mt-3 text-gray-700 leading-relaxed">
-            Kami membantu publikasi ilmiah yang kredibel, terbuka, dan mudah diakses. Publion fokus pada kurasi
-            jurnal berkualitas, kolaborasi lintas disiplin, dan penguatan komunitas peneliti di Asia Tenggara.
+    <!-- How We Build -->
+    <section class="bg-white py-16">
+      <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div class="text-center">
+          <h2 class="text-3xl font-semibold text-gray-900">How We Work</h2>
+          <p class="mt-4 text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            Di Publion kami ingin memastikan riset tidak kehilangan tujuannya. Kami menerbitkan karya ilmiah dan buku
+            dimana penulis merasa nyaman dan mudah berkolaborasi. Sebuah platform dimana argumen jadi pegangan dan
+            pengetahuan jadi kompas yang menuntun keputusan. Karena riset yang berhasil bukan hanya sekedar menjawab
+            pertanyaan penelitian, tapi riset yang bisa membuat kita bertanya lebih baik, berpikir lebih dalam, dan
+            bertindak lebih bijak.
           </p>
-          <p class="mt-4 text-gray-700 leading-relaxed">
-            Dengan sistem editorial yang ketat dan dukungan teknologi, kami memastikan riset yang dipublikasikan
-            memiliki dampak nyata bagi masyarakat.
+        </div>
+        <div class="mt-10 border-t border-gray-100 pt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+          <div class="rounded-2xl border border-gray-100 overflow-hidden hover:border-gray-300 transition">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200&auto=format&fit=crop" alt="Kejernihan" class="h-36 w-full object-cover" />
+            <div class="p-5">
+              <h3 class="text-base font-semibold text-gray-900">Clarity</h3>
+              <p class="mt-2 text-gray-700">Menjaga argumen dan metodologi agar jelas serta dapat diuji.</p>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-gray-100 overflow-hidden hover:border-gray-300 transition">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop" alt="Kolaborasi" class="h-36 w-full object-cover" />
+            <div class="p-5">
+              <h3 class="text-base font-semibold text-gray-900">Collaboration</h3>
+              <p class="mt-2 text-gray-700">Mendorong dialog lintas disiplin yang saling memperkaya.</p>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-gray-100 overflow-hidden hover:border-gray-300 transition">
+            <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=1200&auto=format&fit=crop" alt="Keberlanjutan" class="h-36 w-full object-cover" />
+            <div class="p-5">
+              <h3 class="text-base font-semibold text-gray-900">Sustainability</h3>
+              <p class="mt-2 text-gray-700">Menjaga riset tetap relevan dan dapat dirujuk sepanjang waktu.</p>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-gray-100 overflow-hidden hover:border-gray-300 transition">
+            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop" alt="Kepercayaan" class="h-36 w-full object-cover" />
+            <div class="p-5">
+              <h3 class="text-base font-semibold text-gray-900">Trust</h3>
+              <p class="mt-2 text-gray-700">Membangun reputasi melalui proses yang transparan dan akuntabel.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section id="vision" class="bg-gray-50 py-16">
+      <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="text-3xl font-semibold text-gray-900">Visi</h2>
+          <div class="mt-6 bg-white rounded-3xl p-10 shadow-sm border border-gray-100">
+            <p class="text-xl md:text-2xl text-gray-800 leading-relaxed font-medium">
+              Menjadi platform pengetahuan yang menggerakkan riset untuk memperluas pemahaman, memperkuat keputusan,
+              dan memberi kontribusi nyata bagi kemajuan manusia untuk dunia yang lebih baik.
+            </p>
+          </div>
+          </div>
+          <div id="mission">
+            <h2 class="text-3xl font-semibold text-gray-900">Misi</h2>
+            <ol class="mt-6 space-y-5 text-gray-700 leading-relaxed">
+              <li>
+                <span class="font-semibold text-gray-900">1.</span>
+                Mengelola dan menerbitkan riset serta karya ilmiah yang mendorong pemahaman yang lebih luas, jernih, dan
+                bertanggung jawab lintas disiplin dan masyarakat.
+              </li>
+              <li>
+                <span class="font-semibold text-gray-900">2.</span>
+                Menyediakan ekosistem publikasi dan teknologi yang mendukung riset agar dapat dirujuk, digunakan, dan
+                menjadi dasar pengambilan keputusan yang lebih baik.
+              </li>
+              <li>
+                <span class="font-semibold text-gray-900">3.</span>
+                Membangun ruang kolaborasi pengetahuan yang berkelanjutan, sehingga riset dapat memberi kontribusi nyata
+                bagi kemajuan manusia dan perbaikan kualitas kehidupan bersama.
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Features -->
+    <section class="bg-white py-16">
+      <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
+          <div>
+            <p class="text-sm uppercase tracking-widest text-gray-500">Our Features</p>
+            <h2 class="mt-2 text-3xl font-semibold text-gray-900">Fitur Utama Publion</h2>
+          </div>
+          <p class="text-gray-600 max-w-2xl">
+            Dirancang untuk institusi, akademisi, dan mitra kolaborasi yang membutuhkan publikasi ilmiah yang rapi,
+            terstruktur, dan dapat dirujuk.
           </p>
         </div>
-        <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
-          <h3 class="text-lg font-semibold text-gray-900">Nilai Utama</h3>
-          <ul class="mt-4 space-y-3 text-gray-700">
-            <li><span class="font-semibold">Integritas:</span> proses editorial transparan dan terverifikasi.</li>
-            <li><span class="font-semibold">Kolaborasi:</span> mendorong riset lintas institusi dan disiplin.</li>
-            <li><span class="font-semibold">Akses Terbuka:</span> pengetahuan tersedia untuk publik luas.</li>
-            <li><span class="font-semibold">Dampak:</span> riset diarahkan pada solusi nyata.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Highlights -->
-    <section class="bg-white py-10">
-      <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div class="bg-gray-50 rounded-lg p-6 text-center">
-            <p class="text-3xl font-bold text-gray-900">1.700+</p>
-            <p class="mt-2 text-sm text-gray-600">Topik penelitian terkurasi</p>
+        <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-sm text-gray-700">
+          <div class="rounded-2xl border border-gray-100 p-6 hover:border-gray-300 transition">
+            <h3 class="text-base font-semibold text-gray-900">Publishing Workflow</h3>
+            <p class="mt-2">Alur publikasi end-to-end dari submission, review, hingga rilis.</p>
           </div>
-          <div class="bg-gray-50 rounded-lg p-6 text-center">
-            <p class="text-3xl font-bold text-gray-900">250+</p>
-            <p class="mt-2 text-sm text-gray-600">Kontributor dan reviewer aktif</p>
+          <div class="rounded-2xl border border-gray-100 p-6 hover:border-gray-300 transition">
+            <h3 class="text-base font-semibold text-gray-900">Collaborative Research</h3>
+            <p class="mt-2">Ruang kolaborasi penulis untuk menyusun riset lintas disiplin.</p>
           </div>
-          <div class="bg-gray-50 rounded-lg p-6 text-center">
-            <p class="text-3xl font-bold text-gray-900">98%</p>
-            <p class="mt-2 text-sm text-gray-600">Tingkat kepuasan penulis</p>
+          <div class="rounded-2xl border border-gray-100 p-6 hover:border-gray-300 transition">
+            <h3 class="text-base font-semibold text-gray-900">Knowledge Repository</h3>
+            <p class="mt-2">Arsip pengetahuan yang terstruktur dan mudah dilacak.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 p-6 hover:border-gray-300 transition">
+            <h3 class="text-base font-semibold text-gray-900">Conference Management</h3>
+            <p class="mt-2">Manajemen konferensi akademik untuk institusi dan asosiasi.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 p-6 hover:border-gray-300 transition">
+            <h3 class="text-base font-semibold text-gray-900">Impact Insights</h3>
+            <p class="mt-2">Pelacakan dampak dan keterlacakan karya ilmiah.</p>
+          </div>
+          <div class="rounded-2xl border border-gray-100 p-6 hover:border-gray-300 transition">
+            <h3 class="text-base font-semibold text-gray-900">Institution Ready</h3>
+            <p class="mt-2">Siap digunakan institusi dengan tata kelola yang profesional.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Team -->
-    <section class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 py-12">
-      <div class="text-center">
-        <h2 class="text-2xl font-semibold text-gray-900">Tim Kami</h2>
-        <p class="mt-2 text-gray-700 max-w-2xl mx-auto">
-          Tim editorial dan produk kami bekerja bersama untuk menjaga kualitas publikasi.
+    <!-- Final CTA -->
+    <section id="contact" class="bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16">
+      <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
+        <h2 class="text-3xl font-semibold text-gray-900">Let’s talk about your research.</h2>
+        <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
+          Publion adalah rumah bagi karya ilmiah yang ingin melampaui halaman dan berkontribusi pada dunia nyata.
         </p>
-      </div>
-      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="bg-gray-50 rounded-lg p-6 text-center">
-          <div class="w-20 h-20 mx-auto rounded-full bg-gray-200"></div>
-          <h3 class="mt-4 text-lg font-semibold">Nadia Rahman</h3>
-          <p class="text-sm text-gray-600">Editor in Chief</p>
-        </article>
-        <article class="bg-gray-50 rounded-lg p-6 text-center">
-          <div class="w-20 h-20 mx-auto rounded-full bg-gray-200"></div>
-          <h3 class="mt-4 text-lg font-semibold">Raka Santoso</h3>
-          <p class="text-sm text-gray-600">Head of Research</p>
-        </article>
-        <article class="bg-gray-50 rounded-lg p-6 text-center">
-          <div class="w-20 h-20 mx-auto rounded-full bg-gray-200"></div>
-          <h3 class="mt-4 text-lg font-semibold">Sari Wulandari</h3>
-          <p class="text-sm text-gray-600">Community Lead</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="bg-gray-100 py-12">
-      <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
-        <h2 class="text-2xl font-semibold text-gray-900">Bergabung dengan Publion</h2>
-        <p class="mt-2 text-gray-700">Bangun jejaring riset dan publikasikan karya terbaik Anda bersama kami.</p>
         <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
-          <a href="/register.html" class="px-5 py-2 text-sm font-medium text-white bg-black rounded-full hover:bg-blue-700 transition">Daftar Sekarang</a>
-          <a href="#" class="px-5 py-2 text-sm font-medium text-black border border-black rounded-full hover:bg-black hover:text-white transition">Hubungi Kami</a>
+          <a href="#" class="px-6 py-3 bg-[#0b1f3a] text-white text-sm font-semibold rounded-full hover:bg-[#0e2a4f] transition">
+            Hubungi Publion
+          </a>
+          <a href="#" class="px-6 py-3 border border-gray-900 text-sm font-semibold rounded-full hover:bg-gray-900 hover:text-white transition">
+            Lihat Ekosistem Publion
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
     <div id="footer"></div>
     <script src="components/footer.js"></script>
   </body>

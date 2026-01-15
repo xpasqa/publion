@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publion Collab | Publion Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              onest: ['"Onest"', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="components/header.js"></script>
+  </head>
+  <body class="font-onest bg-white text-gray-900">
+    <div id="header"></div>
+
+    <!-- Hero -->
+    <section class="relative bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1531536241097-b5c69a099e79?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+      <div class="absolute inset-0 bg-white/85"></div>
+      <div class="relative max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div class="lg:order-2">
+            <div class="inline-flex items-center gap-2 rounded-full bg-gray-900 text-white text-xs font-semibold px-3 py-1">
+              Coming Soon
+            </div>
+            <h1 class="mt-3 text-4xl md:text-5xl font-bold text-gray-900">Publion Collab</h1>
+            <p class="mt-4 text-lg text-gray-700">
+              Publion Collab adalah ruang kolaborasi riset global. Platform ini memungkinkan peneliti dari berbagai
+              negara dan bidang untuk menulis bersama, berbagi data, dan menjalankan riset kolaboratif.
+            </p>
+            <p class="mt-4 text-lg text-gray-700">
+              Publion Collab dirancang untuk mempertemukan perspektif lintas batas dan mempercepat lahirnya pengetahuan
+              yang lebih kaya dan relevan.
+            </p>
+            <div class="mt-6 grid gap-3 text-sm text-gray-700">
+              <div class="flex items-start gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-gray-900"></span>
+                <p>Kolaborasi lintas penulis dengan alur kerja terstruktur dan transparan.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-gray-900"></span>
+                <p>Berbagi data riset dan catatan analisis dalam satu ruang kerja.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="mt-1 h-2 w-2 rounded-full bg-gray-900"></span>
+                <p>Mempercepat publikasi melalui kolaborasi lintas disiplin.</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative lg:order-1">
+            <div class="absolute -top-6 -left-6 h-24 w-24 rounded-full bg-gray-200"></div>
+            <div class="absolute -bottom-6 -right-6 h-28 w-28 rounded-full bg-gray-200"></div>
+            <div class="relative rounded-2xl bg-white shadow-lg p-6">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="rounded-xl bg-gray-100 p-4">
+                  <div class="h-8 w-8 rounded-full bg-gray-300 mb-3"></div>
+                  <p class="text-sm font-semibold text-gray-900">Penulis A</p>
+                  <p class="text-xs text-gray-500">Policy Research</p>
+                </div>
+                <div class="rounded-xl bg-gray-100 p-4">
+                  <div class="h-8 w-8 rounded-full bg-gray-300 mb-3"></div>
+                  <p class="text-sm font-semibold text-gray-900">Penulis B</p>
+                  <p class="text-xs text-gray-500">Urban Studies</p>
+                </div>
+                <div class="rounded-xl bg-gray-100 p-4">
+                  <div class="h-8 w-8 rounded-full bg-gray-300 mb-3"></div>
+                  <p class="text-sm font-semibold text-gray-900">Penulis C</p>
+                  <p class="text-xs text-gray-500">Data Science</p>
+                </div>
+                <div class="rounded-xl bg-gray-100 p-4">
+                  <div class="h-8 w-8 rounded-full bg-gray-300 mb-3"></div>
+                  <p class="text-sm font-semibold text-gray-900">Penulis D</p>
+                  <p class="text-xs text-gray-500">Education</p>
+                </div>
+              </div>
+              <div class="mt-6 flex items-center justify-between rounded-xl bg-gray-900 text-white px-4 py-3">
+                <div>
+                  <p class="text-xs uppercase tracking-wide text-gray-300">Ruang Kolaborasi</p>
+                  <p class="text-sm font-semibold">Draft bersama siap ditinjau</p>
+                </div>
+                <div class="text-xs bg-white text-gray-900 px-3 py-1 rounded-full">Aktif</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Penjelasan -->
+    <section class="bg-white py-14">
+      <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+          <div class="lg:col-span-2">
+            <h2 class="text-3xl font-semibold text-gray-900">Kenapa Publion Collab?</h2>
+            <p class="mt-4 text-gray-700 leading-relaxed">
+              Publion Collab membantu tim riset bekerja lebih cepat dan rapi. Semua kontribusi tercatat, diskusi
+              terpusat, dan proses revisi tidak tercecer. Kolaborasi lintas negara menjadi lebih mudah karena setiap
+              langkah — dari outline hingga naskah akhir — terstruktur dan dapat ditinjau bersama.
+            </p>
+            <p class="mt-4 text-gray-700 leading-relaxed">
+              Platform ini mendorong kolaborasi yang adil dengan pembagian tugas yang jelas, serta menjaga kualitas
+              riset melalui proses review internal yang transparan.
+            </p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900">Fitur Utama</h3>
+            <ul class="mt-4 space-y-3 text-sm text-gray-700">
+              <li>Workspace riset terintegrasi untuk draft, data, dan catatan.</li>
+              <li>Kolaborasi real-time dengan jejak kontribusi penulis.</li>
+              <li>Template alur kerja untuk riset kuantitatif, kualitatif, dan mixed.</li>
+              <li>Ruang diskusi aman untuk review dan feedback tim.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aturan Kolaborasi -->
+    <section class="bg-gray-100 py-14">
+      <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10">
+        <h2 class="text-3xl font-semibold text-gray-900">Aturan Kolaborasi</h2>
+        <p class="mt-3 text-gray-700 max-w-2xl">
+          Kami menjaga kolaborasi tetap sehat, transparan, dan produktif. Berikut prinsip dasar di Publion Collab.
+        </p>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900">Kontribusi Jelas</h3>
+            <p class="mt-2 text-sm text-gray-700">Setiap penulis memiliki peran dan target kontribusi yang disepakati.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900">Transparansi Data</h3>
+            <p class="mt-2 text-sm text-gray-700">Sumber data dan metodologi dicatat untuk mencegah miskomunikasi.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900">Etika Publikasi</h3>
+            <p class="mt-2 text-sm text-gray-700">Atribusi penulis, sitasi, dan konflik kepentingan harus jelas.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900">Review Internal</h3>
+            <p class="mt-2 text-sm text-gray-700">Setiap draft melewati review tim sebelum dikirim ke jurnal.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900">Komunikasi Terbuka</h3>
+            <p class="mt-2 text-sm text-gray-700">Diskusi dilakukan di ruang kolaborasi agar keputusan terdokumentasi.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <h3 class="text-lg font-semibold text-gray-900">Timeline Disepakati</h3>
+            <p class="mt-2 text-sm text-gray-700">Setiap proyek memiliki tenggat yang realistis dan disepakati tim.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="bg-white py-14">
+      <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10">
+        <h2 class="text-3xl font-semibold text-gray-900">Testimonial</h2>
+        <p class="mt-3 text-gray-700 max-w-2xl">Apa kata peneliti yang sudah berkolaborasi di Publion Collab.</p>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <figure class="bg-gray-50 rounded-xl p-6 shadow-sm">
+            <blockquote class="text-sm text-gray-700">
+              “Kolaborasi lintas kampus jadi jauh lebih terarah. Semua revisi terdokumentasi, dan kami bisa sepakat
+              lebih cepat.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-semibold text-gray-900">Nadia Rahman</figcaption>
+            <p class="text-xs text-gray-500">Editor & Peneliti</p>
+          </figure>
+          <figure class="bg-gray-50 rounded-xl p-6 shadow-sm">
+            <blockquote class="text-sm text-gray-700">
+              “Ruang kerja yang rapi membuat pembagian tugas jelas. Data, draft, dan diskusi ada di satu tempat.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-semibold text-gray-900">Agus Siregar</figcaption>
+            <p class="text-xs text-gray-500">Ekonom Regional</p>
+          </figure>
+          <figure class="bg-gray-50 rounded-xl p-6 shadow-sm">
+            <blockquote class="text-sm text-gray-700">
+              “Kami bisa kolaborasi dengan peneliti luar negeri tanpa kehilangan alur. Publion Collab terasa sangat
+              membantu.”
+            </blockquote>
+            <figcaption class="mt-4 text-sm font-semibold text-gray-900">Maya Lestari</figcaption>
+            <p class="text-xs text-gray-500">Sosiolog Perkotaan</p>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-gray-900 text-white py-16">
+      <div class="max-w-screen-xl mx-auto px-6 sm:px-8 lg:px-10 text-center">
+        <h2 class="text-3xl font-semibold">Mulai Kolaborasi Riset Anda</h2>
+        <p class="mt-3 text-gray-300 max-w-2xl mx-auto">
+          Buat ruang kerja kolaboratif, undang rekan penulis, dan mulai menyusun riset bersama di Publion Collab.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+          <a href="/register.html" class="px-6 py-3 bg-[#0b1f3a] text-white text-sm font-semibold rounded-full hover:bg-[#0e2a4f] transition">
+            Daftar Sekarang
+          </a>
+          <a href="#" class="px-6 py-3 border border-white text-sm font-semibold rounded-full hover:bg-white hover:text-gray-900 transition">
+            Hubungi Tim Collab
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="components/footer.js"></script>
+  </body>
+</html>

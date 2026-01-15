@@ -9,9 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <a href="/about.html" class="text-gray-600 hover:text-blue-600 transition">About</a>
             <a href="/katalog-buku.html" class="text-gray-600 hover:text-blue-600 transition">Books</a>
             <a href="/journals.html" class="text-gray-600 hover:text-blue-600 transition">Journals</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600 transition">Research</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600 transition">Connect</a>
-            <a href="#" class="text-gray-600 hover:text-blue-600 transition">Conference</a>
+            <a href="/colab.html" class="text-gray-600 hover:text-blue-600 transition">Collab</a>
+            <a href="/conferences.html" class="text-gray-600 hover:text-blue-600 transition">Conference</a>
           </nav>
 
           <div class="md:hidden">
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           <div class="hidden md:flex items-center gap-4">
             <a href="/login.html" class="px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
-            <a href="/register.html" class="hidden stealm:inline-block px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
+            <a href="#" class="hidden stealm:inline-block px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Download Annual Report</a>
           </div>
         </div>
 
@@ -32,12 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
           <a href="/about.html" class="block text-gray-700 hover:text-teal-600">About</a>
           <a href="/katalog-buku.html" class="block text-gray-700 hover:text-teal-600">Books</a>
           <a href="/journals.html" class="block text-gray-700 hover:text-teal-600">Journals</a>
-          <a href="#" class="block text-gray-700 hover:text-teal-600">Research</a>
-          <a href="#" class="block text-gray-700 hover:text-teal-600">Connect</a>
-          <a href="#" class="block text-gray-700 hover:text-teal-600">Conference</a>
+          <a href="/colab.html" class="block text-gray-700 hover:text-teal-600">Collab</a>
+          <a href="/conferences.html" class="block text-gray-700 hover:text-teal-600">Conference</a>
           <div class="flex justify-between gap-2 mt-4">
             <a href="/login.html" class="w-1/2 text-center px-4 py-2 text-sm text-white bg-black rounded-md hover:bg-teal-500">Login</a>
-            <a href="/register.html" class="w-1/2 text-center px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Register</a>
+            <a href="#" class="w-1/2 text-center px-4 py-2 text-sm text-black border border-black rounded-md hover:bg-black hover:text-white">Download Annual Report</a>
           </div>
         </div>
       </div>
